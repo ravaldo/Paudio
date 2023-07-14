@@ -8,8 +8,16 @@
 
 
 
-.rhap_container {
+/* .rhap_container {
     background-color: red;
+    bottom: 0;
+    position: fixed;
+} */
+
+.player_footer {
+    color: white;
+    background-color: black;
+    width: 100%;
     bottom: 0;
     position: fixed;
 }

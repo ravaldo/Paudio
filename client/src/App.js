@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AudioPlayer from 'react-h5-audio-player';
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 import './App.css';
 import 'react-h5-audio-player/lib/styles.css';
@@ -31,20 +32,25 @@ function App() {
           <h1>sfsfs</h1>
           <h1>sfsfs</h1>
           <h1>sfsfs</h1>
-          <h1>sfsfs</h1>
+          <h1>zzzz</h1>
 
             <Routes>
               <Route path="/library" />
               <Route path="/search" />
               <Route path="/browse" />
             </Routes>
-        </Router>
+       
+      <div className="player_footer">
         <AudioPlayer
-          autoPlay
+          // autoPlay
           src={audio_url}
           onPlay={e => console.log("onPlay")}
         // other props here
         />
+        <Footer/>
+        
+      </div>
+      </Router>
     </div>
   );
 }
