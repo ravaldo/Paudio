@@ -2,15 +2,18 @@
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: black;
 }
 
 .content {
-    margin-top: 10vh;
-    margin-bottom: 15vh;
+    padding-top: 10vh;
+    padding-bottom: 15vh;
+    background-color: #222;
+    color: #ddd;
 }
 
-.rhap_container {
-    background-color: red;
+.App .rhap_container {
+    background-color: black;
     bottom: 0;
     position: fixed;
 }
