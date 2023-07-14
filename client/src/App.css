@@ -7,9 +7,9 @@
 
 .content {
     padding-top: 10vh;
-    padding-bottom: 15vh;
     background-color: #222;
     color: #ddd;
+    flex-grow: 1;
 }
 
 .App .rhap_container {
