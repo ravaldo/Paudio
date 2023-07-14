@@ -1,12 +1,13 @@
 .App {
-    /* background-color: brown; */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-
-
+.content {
+    margin-top: 10vh;
+    margin-bottom: 15vh;
+}
 
 .rhap_container {
     background-color: red;

@@ -1,0 +1,195 @@
+const dummySearch = 
+[
+    {
+      "uuid": "fc3c8bb1-1b2a-4619-a029-8866610ae292",
+      "name": "Crime Junkie",
+      "rssUrl": "https://feeds.simplecast.com/qm_9xx0g",
+      "description": "If you can never get enough true crime... Congratulations, you’ve found your people.",
+      "imageUrl": "https://image.simplecastcdn.com/images/a1a87b67-2865-4234-a087-b342aa30c358/ae42d51b-df99-4b19-bb3f-09f25598bcdd/3000x3000/crimejunkie-logo-registered.jpg?aid=rss_feed",
+      "totalEpisodesCount": 327,
+      "itunesInfo": {
+        "uuid": "fc3c8bb1-1b2a-4619-a029-8866610ae292",
+        "hash": "721816aceca286a5a029294856c9b412dbfee101be9fe5cfc62d2265dd0d4a07",
+        "subtitle": null,
+        "summary": "If you can never get enough true crime... Congratulations, you’ve found your people.",
+        "baseArtworkUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts123/v4/d0/74/01/d0740102-0d60-79b1-d7b6-6fe68db84574/mza_392866461175466732.jpg/",
+        "baseArtworkUrlOf": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts123/v4/d0/74/01/d0740102-0d60-79b1-d7b6-6fe68db84574/mza_392866461175466732.jpg/undefinedxundefinedbb.png",
+        "publisherId": 1485045052,
+        "publisherName": "audiochuck",
+        "country": "UNITED_STATES_OF_AMERICA"
+      }
+    },
+    {
+      "uuid": "5677f369-bb80-4862-af22-b75cd06bca71",
+      "name": "Casefile True Crime",
+      "rssUrl": "https://audioboom.com/channels/4940872.rss",
+      "description": "Fact is scarier than fiction. Subscribe to Casefile Premium to receive ad-free episodes released one week early, along with access to bonus Q&A’s, our exclusive show ‘Behind the Files’, and more.",
+      "imageUrl": "https://audioboom.com/i/36767849.jpg",
+      "totalEpisodesCount": 297,
+      "itunesInfo": {
+        "uuid": "5677f369-bb80-4862-af22-b75cd06bca71",
+        "hash": "f969bb823ff12a5bbd1081f4f595abf773a1fd8ca75abed44bedf4670af9b4ec",
+        "subtitle": null,
+        "summary": "Fact is scarier than fiction. Subscribe to Casefile Premium to receive ad-free episodes released one week early, along with access to bonus Q&A’s, our exclusive show ‘Behind the Files’, and more.",
+        "baseArtworkUrl": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts115/v4/f0/d3/62/f0d36290-b222-397c-f1a5-02623a69b3f0/mza_9983181717749715502.jpg/",
+        "baseArtworkUrlOf": "https://is3-ssl.mzstatic.com/image/thumb/Podcasts115/v4/f0/d3/62/f0d36290-b222-397c-f1a5-02623a69b3f0/mza_9983181717749715502.jpg/undefinedxundefinedbb.png",
+        "publisherId": 1533870296,
+        "publisherName": "Casefile Presents",
+        "country": "UNITED_STATES_OF_AMERICA"
+      }
+    },
+    {
+      "uuid": "756e5b60-527e-4a27-8e31-09a8632a40a7",
+      "name": "True Crime Garage",
+      "rssUrl": "https://feeds.simplecast.com/zatU8XEL",
+      "description": "Hosts Nic and the Captain invite you to grab a chair, grab a beer and join them as they talk some true crime. This is no ordinary garage: it’s a rabbit hole of true crime, with a generous supply of alcohol and banter to lighten the load. From international atrocities to heinous stories on (US) home turf, dive head-first into a different case each week, and enjoy a cold one whilst your there. \n\n\n\n\nIf you consider yourself an armchair detective, you’re in the right place, and you’re amongst friends. For the mystery-seeker, True Crime Garage presents an archive of missing persons, unsolved and cold cases, plus accounts of infamous serial killers and chilling solved cases. \n\n\n\n\nTrue Crime Garage has just one rule: don’t litter. Remember to not take yourself too seriously because if you do, nobody else will. \n\n\n\n\nMissing persons (including):\n\n\n\n\nMaura Murray \n\nBrandon Lawson \n\nAsha Degree\n\nWiliam Tyrell\n\nEmma Fillipoff\n\nBrian Shaffer\n\nJaliek Rainwalker \n\nMadeleine McCann\n\nJennifer Kesse\n\n\n\n\nUnsolved cases (including):\n\n\n\n\nMitrice Richardson \n\nKendrick Johnson\n\nJonBenet Ramsey\n\nThe Delphi murders\n\nOJ Simpson\n\nThe Tylenol Murders \n\nElisa Lam\n\nThe Photo: Kris Kremers and Lisanne Froon \n\nThe West Memphis 3 \n\nAmy Mihaljevic\n\n\n\n\n\n\n\nSerial killers (including):\n\n\n\n\nThe Long Island Serial Killer (LISK)\n\nZodiac \n\nTed Bundy\n\nThe Backpacker: Ivan Milat \n\nBTK: Dennis Rader\n\nJohn Wayne Gacy \n\nJeffrey Dahmer \n\nEdmund Kemper\n\nEd Gein\n\n\n\n\nSolved cases (including):\n\n\n\n\nChris Watts\n\nThe Unabomber \n\nJohn Lennon \n\nScott Peterson\n\nSon of Sam\n\nColumbine\n\nRoom 309: Sidney Teerhuis-Moar\n\nKenneka Jenkins\n\nRae Carruth",
+      "imageUrl": "https://image.simplecastcdn.com/images/20b232f5-ee6a-4911-916b-a6b2a7854848/a963bf0a-0c9d-41fd-b41d-4a035c34ad0f/3000x3000/image.jpg?aid=rss_feed",
+      "totalEpisodesCount": 648,
+      "itunesInfo": {
+        "uuid": "756e5b60-527e-4a27-8e31-09a8632a40a7",
+        "hash": "ad4cf131527ebf343ab09fea8b846a6ae5a474222cdf9f278e40cd966b9b29aa",
+        "subtitle": null,
+        "summary": "Hosts Nic and the Captain invite you to grab a chair, grab a beer and join them as they talk some true crime. This is no ordinary garage: it’s a rabbit hole of true crime, with a generous supply of alcohol and banter to lighten the load. From international atrocities to heinous stories on (US) home turf, dive head-first into a different case each week, and enjoy a cold one whilst your there. \n\n\n\n\nIf you consider yourself an armchair detective, you’re in the right place, and you’re amongst friends. For the mystery-seeker, True Crime Garage presents an archive of missing persons, unsolved and cold cases, plus accounts of infamous serial killers and chilling solved cases. \n\n\n\n\nTrue Crime Garage has just one rule: don’t litter. Remember to not take yourself too seriously because if you do, nobody else will. \n\n\n\n\nMissing persons (including):\n\n\n\n\nMaura Murray \n\nBrandon Lawson \n\nAsha Degree\n\nWiliam Tyrell\n\nEmma Fillipoff\n\nBrian Shaffer\n\nJaliek Rainwalker \n\nMadeleine McCann\n\nJennifer Kesse\n\n\n\n\nUnsolved cases (including):\n\n\n\n\nMitrice Richardson \n\nKendrick Johnson\n\nJonBenet Ramsey\n\nThe Delphi murders\n\nOJ Simpson\n\nThe Tylenol Murders \n\nElisa Lam\n\nThe Photo: Kris Kremers and Lisanne Froon \n\nThe West Memphis 3 \n\nAmy Mihaljevic\n\n\n\n\n\n\n\nSerial killers (including):\n\n\n\n\nThe Long Island Serial Killer (LISK)\n\nZodiac \n\nTed Bundy\n\nThe Backpacker: Ivan Milat \n\nBTK: Dennis Rader\n\nJohn Wayne Gacy \n\nJeffrey Dahmer \n\nEdmund Kemper\n\nEd Gein\n\n\n\n\nSolved cases (including):\n\n\n\n\nChris Watts\n\nThe Unabomber \n\nJohn Lennon \n\nScott Peterson\n\nSon of Sam\n\nColumbine\n\nRoom 309: Sidney Teerhuis-Moar\n\nKenneka Jenkins\n\nRae Carruth",
+        "baseArtworkUrl": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts116/v4/e2/e1/78/e2e1788b-e584-7338-5561-f45f54d24fac/mza_11079836307425036802.jpg/",
+        "baseArtworkUrlOf": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts116/v4/e2/e1/78/e2e1788b-e584-7338-5561-f45f54d24fac/mza_11079836307425036802.jpg/undefinedxundefinedbb.png",
+        "publisherId": null,
+        "publisherName": "TRUE CRIME GARAGE",
+        "country": "UNITED_STATES_OF_AMERICA"
+      }
+    },
+    {
+      "uuid": "ef45bb80-8360-4f84-a9da-5253a0916065",
+      "name": "Wine & Crime",
+      "rssUrl": "https://wineandcrimepodcast.libsyn.com/rss",
+      "description": "Wine & Crime is a true crime / comedy podcast. Join three friends as they chug wine, chat true crime, and unleash their worst Minnesotan accents!",
+      "imageUrl": "https://ssl-static.libsyn.com/p/assets/5/5/5/1/5551a12708ebfdd8bafc7308ab683e82/Logo_test.png",
+      "totalEpisodesCount": 433,
+      "itunesInfo": {
+        "uuid": "ef45bb80-8360-4f84-a9da-5253a0916065",
+        "hash": "f4c62378a15c4b868b6dea7319daafc0b8c80a4c658cb36b98a33621417b68e4",
+        "subtitle": null,
+        "summary": "Wine & Crime is a true crime / comedy podcast. Join three friends as they chug wine, chat true crime, and unleash their worst Minnesotan accents!",
+        "baseArtworkUrl": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/c1/8b/eb/c18beb03-9f4a-93db-721d-125279375bc1/mza_15714408527016786008.png/",
+        "baseArtworkUrlOf": "https://is1-ssl.mzstatic.com/image/thumb/Podcasts126/v4/c1/8b/eb/c18beb03-9f4a-93db-721d-125279375bc1/mza_15714408527016786008.png/undefinedxundefinedbb.png",
+        "publisherId": null,
+        "publisherName": "Wine & Crime Podcast",
+        "country": "UNITED_STATES_OF_AMERICA"
+      }
+    },
+    {
+      "uuid": "5f7044eb-cb1d-4ec7-a1ca-c246f4a8737c",
+      "name": "My Favorite Murder with Karen Kilgariff and Georgia Hardstark",
+      "rssUrl": "https://rss.art19.com/erm-mfm",
+      "description": "<p>My Favorite Murder is a true crime comedy podcast hosted by Karen Kilgariff and Georgia Hardstark. Each week, Karen and Georgia tell each other their favorite true crimes and share hometown crime stories from friends and listeners.</p>",
+      "imageUrl": "https://content.production.cdn.art19.com/images/a0/41/3a/14/a0413a14-d1e5-4504-bc80-536db1f74ad9/f89549f7a47bd7b39fda30cfc5636b72dd3103592fe5bc3e19d3b50845720c3215dc336b34fe868a3e04a979835b526a17f57847ac83c77252861d6ea581e531.jpeg",
+      "totalEpisodesCount": 758,
+      "itunesInfo": {
+        "uuid": "5f7044eb-cb1d-4ec7-a1ca-c246f4a8737c",
+        "hash": "c1b4ff277151eac9a42c5f633ad199542f348ae4e88ab2ed80cc7db4fe1b48d6",
+        "subtitle": null,
+        "summary": "<p>My Favorite Murder is a true crime comedy podcast hosted by Karen Kilgariff and Georgia Hardstark. Each week, Karen and Georgia tell each other their favorite true crimes and share hometown crime stories from friends and listeners.</p>",
+        "baseArtworkUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts112/v4/c8/f4/bd/c8f4bdcd-3cb4-e7cc-701d-493456a9119c/mza_13380675792570243253.jpeg/",
+        "baseArtworkUrlOf": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts112/v4/c8/f4/bd/c8f4bdcd-3cb4-e7cc-701d-493456a9119c/mza_13380675792570243253.jpeg/undefinedxundefinedbb.png",
+        "publisherId": 1445321651,
+        "publisherName": "Exactly Right",
+        "country": "UNITED_STATES_OF_AMERICA"
+      }
+    },
+    {
+      "uuid": "52c172b1-3e84-4e8f-b378-d2dd3026229e",
+      "name": "Real Crime Profile",
+      "rssUrl": "https://rss.art19.com/real-crime-profile-wondery",
+      "description": "<p>Join Jim Clemente (former FBI profiler), Laura Richards (criminal behavioral analyst, former New Scotland Yard) and Lisa Zambetti (Casting director for CBS' Criminal Minds) as they profile behavior from real criminal cases. </p>",
+      "imageUrl": "https://content.production.cdn.art19.com/images/5f/9a/f2/03/5f9af203-9d78-481f-8146-78c2227c2411/b64a26649a5ebc6b6b780932583ce94867f28a2b754b10ed71a923e0293955128dba015692c5dc3ca3d1bb3ee80ee77d00e4c5e1cccdc954b185c2bc057fac8b.jpeg",
+      "totalEpisodesCount": 480,
+      "itunesInfo": {
+        "uuid": "52c172b1-3e84-4e8f-b378-d2dd3026229e",
+        "hash": "0e0b32b651d97f923abd119d1a944cea17e9f730d49331615a0ba4e49620308e",
+        "subtitle": null,
+        "summary": "<p>Join Jim Clemente (former FBI profiler), Laura Richards (criminal behavioral analyst, former New Scotland Yard) and Lisa Zambetti (Casting director for CBS' Criminal Minds) as they profile behavior from real criminal cases. </p>",
+        "baseArtworkUrl": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts113/v4/ae/05/89/ae058968-8d14-e44f-1107-adfb79057e40/mza_3149060387677514283.jpeg/",
+        "baseArtworkUrlOf": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts113/v4/ae/05/89/ae058968-8d14-e44f-1107-adfb79057e40/mza_3149060387677514283.jpeg/undefinedxundefinedbb.png",
+        "publisherId": 1134742667,
+        "publisherName": "Real Crime Profile / Wondery",
+        "country": "UNITED_STATES_OF_AMERICA"
+      }
+    },
+    {
+      "uuid": "88b76e44-4d1a-4225-bc2f-d11d26e36bf6",
+      "name": "True Crime Obsessed",
+      "rssUrl": "https://audioboom.com/channels/4929680.rss",
+      "description": "The true crime / comedy podcast YOU NEED IN YOUR LIFE. We recap your favorite true crime documentaries with humor, sass, and heart. FROM VULTURE: \"It’s not wrong to laugh when you’re listening to a true-crime podcast. Or at least I hope it isn’t, because if almost crashing my car while listening to True Crime Obsessed is wrong, I don’t want to be right.\" Hear our take on \"Abducted in Plain Sight,\" \"The Ted Bundy Tapes,\"Dirty John: The Dirty Truth\" and so many more.",
+      "imageUrl": "https://audioboom.com/i/36105430.jpg",
+      "totalEpisodesCount": 393,
+      "itunesInfo": {
+        "uuid": "88b76e44-4d1a-4225-bc2f-d11d26e36bf6",
+        "hash": "9c45d29d0f43ecdefb3d15de28301d5a5ebc173adaa4ebc250f1fd0dcbe9a5c3",
+        "subtitle": null,
+        "summary": "The true crime / comedy podcast YOU NEED IN YOUR LIFE. We recap your favorite true crime documentaries with humor, sass, and heart. FROM VULTURE: \"It’s not wrong to laugh when you’re listening to a true-crime podcast. Or at least I hope it isn’t, because if almost crashing my car while listening to True Crime Obsessed is wrong, I don’t want to be right.\" Hear our take on \"Abducted in Plain Sight,\" \"The Ted Bundy Tapes,\"Dirty John: The Dirty Truth\" and so many more.",
+        "baseArtworkUrl": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts114/v4/e0/78/de/e078dec0-4fae-6362-1db3-8060c564fdf2/mza_11182422898944773578.jpg/",
+        "baseArtworkUrlOf": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts114/v4/e0/78/de/e078dec0-4fae-6362-1db3-8060c564fdf2/mza_11182422898944773578.jpg/undefinedxundefinedbb.png",
+        "publisherId": 1523173754,
+        "publisherName": "Obsessed Network",
+        "country": "UNITED_STATES_OF_AMERICA"
+      }
+    },
+    {
+      "uuid": "8810d94b-7c78-4fff-940e-5e7c5e30a3e9",
+      "name": "Canadian True Crime",
+      "rssUrl": "https://feeds.acast.com/public/shows/e3736df1-0f3e-41f3-a009-2ab3d6dddc52",
+      "description": "<p>Join Kristi Lee - an Australian who moved to Canada over a decade ago, for an immersive deep dive into some of the country’s most thought-provoking true crime cases.</p><p>Using facts curated from court documents, inquiry reports and news archives, Kristi carefully unravels each case—exposing pitfalls of the criminal justice system that all Canadians need to know about. </p><p>At least two new episodes a month. Learn more at www.canadiantruecrime.ca.</p><br /><hr><p style='color:grey; font-size:0.75em;'> Hosted on Acast. See <a style='color:grey;' target='_blank' rel='noopener noreferrer' href='https://acast.com/privacy'>acast.com/privacy</a> for more information.</p>",
+      "imageUrl": "https://assets.pippa.io/shows/61b7653d169562084ee95064/452f7873-d761-448b-be5a-dcde94ddda7d.jpg",
+      "totalEpisodesCount": 163,
+      "itunesInfo": {
+        "uuid": "8810d94b-7c78-4fff-940e-5e7c5e30a3e9",
+        "hash": "61dfdac1eee990c5d43083214ec39168cca0ed6230623c7d757c20a6373cd748",
+        "subtitle": "Explore Canada's dark side.",
+        "summary": "<p>Join Kristi Lee - an Australian who moved to Canada over a decade ago, for an immersive deep dive into some of the country’s most thought-provoking true crime cases.</p><p>Using facts curated from court documents, inquiry reports and news archives, Kristi carefully unravels each case—exposing pitfalls of the criminal justice system that all Canadians need to know about. </p><p>At least two new episodes a month. Learn more at www.canadiantruecrime.ca.</p><br /><hr><p style='color:grey; font-size:0.75em;'> Hosted on Acast. See <a style='color:grey;' target='_blank' rel='noopener noreferrer' href='https://acast.com/privacy'>acast.com/privacy</a> for more information.</p>",
+        "baseArtworkUrl": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts116/v4/dd/5c/2a/dd5c2aa5-006c-9595-c125-42ee624108d4/mza_13928001649478502191.jpg/",
+        "baseArtworkUrlOf": "https://is2-ssl.mzstatic.com/image/thumb/Podcasts116/v4/dd/5c/2a/dd5c2aa5-006c-9595-c125-42ee624108d4/mza_13928001649478502191.jpg/undefinedxundefinedbb.png",
+        "publisherId": null,
+        "publisherName": "Kristi Lee",
+        "country": "UNITED_STATES_OF_AMERICA"
+      }
+    },
+    {
+      "uuid": "2f7e334f-3e71-4239-96ac-4ed9c8b0d294",
+      "name": "Crime in Sports",
+      "rssUrl": "https://rss.art19.com/crimeinsports",
+      "description": "<p>Two comedians take an unmerciful and hilarious look at athletes who have lost big games...with the law! Crime in Sports does the research, and finds the funny in the world of sports true crime. New episode every week! </p>",
+      "imageUrl": "https://content.production.cdn.art19.com/images/f5/42/67/4d/f542674d-e9f4-4396-8a90-d512e633ef31/5b527dea1161fe6c698e34cdcdf0616f5afd2ce8050e6dd87a2f39f05298c3d9aed284062ec752de09035add66b35496d6a7cdacc2869c904f46b745e8c74b58.jpeg",
+      "totalEpisodesCount": 363,
+      "itunesInfo": {
+        "uuid": "2f7e334f-3e71-4239-96ac-4ed9c8b0d294",
+        "hash": "cb99e37bf1d0a7988d5edd04ebb8778e126952cdea80908bcda1ce0cbae55491",
+        "subtitle": null,
+        "summary": "<p>Two comedians take an unmerciful and hilarious look at athletes who have lost big games...with the law! Crime in Sports does the research, and finds the funny in the world of sports true crime. New episode every week! </p>",
+        "baseArtworkUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts116/v4/62/bb/d9/62bbd91c-70ff-b747-fd15-69058978d98a/mza_9993310753001239878.jpeg/",
+        "baseArtworkUrlOf": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts116/v4/62/bb/d9/62bbd91c-70ff-b747-fd15-69058978d98a/mza_9993310753001239878.jpeg/undefinedxundefinedbb.png",
+        "publisherId": 1537467785,
+        "publisherName": "James Pietragallo, Jimmie Whisman",
+        "country": "UNITED_STATES_OF_AMERICA"
+      }
+    },
+    {
+      "uuid": "17ad17b6-e317-4e58-8106-30ab950df905",
+      "name": "There are Crimes and Crimes",
+      "rssUrl": "https://s3.amazonaws.com/aplt1rss/7605.rss",
+      "description": "Maurice, a playwright on the brink of success, feels so confident in his professional future he proposes to Jeanne, his mistress. However, upon meeting Henriette, his friend's mistress, he gets swept away by his overwhelming passion for her. The feelings are reciprocated by Henriette and their relationship quickly spins out of control. Tragedy strikes and both are swept up in accusations of murder with the potential to destroy them both. This is a story of passion, tragedy, redemption, and repentance. (Summary by Amanda Friday)<br/><br/><strong>Cast</strong><br>Maurice: <a href=\"http://librivox.org/reader/4535\">Brett W. Downey</a><br>Jeanne/Servant Girl: <a href=\"http://librivox.org/reader/1259\">Elizabeth Klett</a><br>Marion: <a href=\"http://librivox.org/reader/7662\">Emily Jones</a><br>Adolphe: <a href=\"http://librivox.org/reader/3657\">BellonaTimes</a><br>Henriette/Narrator: <a href=\"http://librivox.org/reader/6544\">Amanda Friday</a><br>Emile: <a href=\"http://librivox.org/reader/7079\">Chuck Williamson</a><br>Madame Catherine: <a href=\"http://librivox.org/reader/7138\">Caprisha Page</a><br>The Abbe: <a href=\"http://librivox.org/reader/4705\">Algy Pug</a><br>Watchman/Waiter/Guard: <a href=\"http://librivox.org/reader/7315\">Charlotte Duckett</a><br>Commissaire/Detective: <a href=\"http://librivox.org/reader/6754\">Todd</a><br><br><strong>Audio edited by Caprisha Page and Elizabeth Klett</strong><br/><br/>",
+      "imageUrl": "http://archive.org/download/LibrivoxCdCoverArt30/crimes_crimes_1305.jpg",
+      "totalEpisodesCount": 4,
+      "itunesInfo": {
+        "uuid": "17ad17b6-e317-4e58-8106-30ab950df905",
+        "hash": "a69030e8604984684dd2b4a0cd997978d6b5c7ca36a29ea3ce632630c894fe93",
+        "subtitle": null,
+        "summary": "Maurice, a playwright on the brink of success, feels so confident in his professional future he proposes to Jeanne, his mistress. However, upon meeting Henriette, his friend's mistress, he gets swept away by his overwhelming passion for her. The feelings are reciprocated by Henriette and their relationship quickly spins out of control. Tragedy strikes and both are swept up in accusations of murder with the potential to destroy them both. This is a story of passion, tragedy, redemption, and repentance. (Summary by Amanda Friday)<br/><br/><strong>Cast</strong><br>Maurice: <a href=\"http://librivox.org/reader/4535\">Brett W. Downey</a><br>Jeanne/Servant Girl: <a href=\"http://librivox.org/reader/1259\">Elizabeth Klett</a><br>Marion: <a href=\"http://librivox.org/reader/7662\">Emily Jones</a><br>Adolphe: <a href=\"http://librivox.org/reader/3657\">BellonaTimes</a><br>Henriette/Narrator: <a href=\"http://librivox.org/reader/6544\">Amanda Friday</a><br>Emile: <a href=\"http://librivox.org/reader/7079\">Chuck Williamson</a><br>Madame Catherine: <a href=\"http://librivox.org/reader/7138\">Caprisha Page</a><br>The Abbe: <a href=\"http://librivox.org/reader/4705\">Algy Pug</a><br>Watchman/Waiter/Guard: <a href=\"http://librivox.org/reader/7315\">Charlotte Duckett</a><br>Commissaire/Detective: <a href=\"http://librivox.org/reader/6754\">Todd</a><br><br><strong>Audio edited by Caprisha Page and Elizabeth Klett</strong><br/><br/>",
+        "baseArtworkUrl": null,
+        "baseArtworkUrlOf": null,
+        "publisherId": null,
+        "publisherName": null,
+        "country": null
+      }
+    }
+  ]
+
+module.exports = dummySearch;
