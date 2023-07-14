@@ -1,0 +1,20 @@
+PodcastSeries
+	name: String
+	description: String
+	imageUrl: String
+	itunesId: Int
+	episodes: []
+	totalEpisodesCount: Int
+	genres: []
+
+
+PodcastEpisode
+	datePublished: Int	(epoch)
+	name: String
+	description: String
+	imageUrl: String
+	audioUrl: String
+	fileLength: Int
+	fileType: String
+	duration: Int
+	podcastSeries: PodcastSeries

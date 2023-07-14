@@ -1,0 +1,254 @@
+query {
+  getPodcastSeries(name:"Your Mom's House with Christina P. and Tom Segura"){
+  	uuid
+	datePublished
+	name
+	description
+	imageUrl
+	itunesId
+	hash
+	childrenHash
+	episodes(sortOrder:LATEST, page:1, limitPerPage:25){
+		uuid
+		name
+		description
+		audioUrl
+	}
+	totalEpisodesCount
+	genres
+	itunesInfo {
+	  uuid
+	  hash
+	  subtitle
+	  summary
+	  baseArtworkUrl
+	  baseArtworkUrlOf
+	  publisherId
+	  publisherName
+	  country
+	}
+	seriesType
+	language
+	contentType
+	isExplicitContent
+	copyright
+	websiteUrl
+	rssUrl
+	rssOwnerName
+	rssOwnerPublicEmail
+	authorName
+	feedRefreshDetails {
+	  uuid
+	  priority
+	  priorityReason
+	  dateLastRefreshed
+	}
+	isCompleted
+	isBlocked
+  }  
+}
+
+
+
+{
+  "data": {
+    "getPodcastSeries": {
+      "uuid": "a5051125-9979-44ef-b161-d35c07fcb3a2",
+      "datePublished": 1388732654,
+      "name": "Your Mom's House with Christina P. and Tom Segura",
+      "description": "Christina Pazsitzky and Tom Segura are comedians who are also married. They are the Mommies and they welcome you to join them. Dental updates! Dudes! Stories! Wiping!",
+      "imageUrl": "https://image.simplecastcdn.com/images/bb5948cd-50b8-4042-b16f-2557631e4bb4/765acd0f-8305-4f4d-8de9-0da98012c05a/3000x3000/2019-ymhpod-coverart1.jpg?aid=rss_feed",
+      "itunesId": 503482646,
+      "hash": "06f31aec77b0c1ba696dfe239e4facecefd4e112d0cfd151b08881a4426a4b2e",
+      "childrenHash": "33304e2dca5e653a24e7643dc8f787b64638cc384e467b4c890e2f6dd833b967",
+      "episodes": [
+        {
+          "uuid": "7fc53b97-0f23-47ae-af3f-28dc59550028",
+          "name": "Growers Vs. Show-ers w/ Tom Papa | Your Mom's House Ep. 716",
+          "description": "<p>SPONSORS:<br />-Go to <a href=\"https://Saatva.com/theshit\">https://Saatva.com/theshit</a> to get $200 off ANY mattress of your choice.</p><p>Go see Tom’s new special “SledgeHammer” Available NOW on Netflix!</p><p>PULL YOUR JEANS UP! It’s another episode of YMH and this week, Tom Segura and Christina P discuss making their Netflix specials, specifically Tom’s newest “Sledgehammer,” middle-aged hobbies, some brown talk, and more! They watch a video of a cool lady giving tips on how to dwell in your vehicle, and a very cool guy named Daddy Demarkco. They also revisit the Humans of New York guy, Rex, who has a new post up, and give him a call to get some tips.</p><p>Tom Papa is a comedian, actor, and author, whose new book is titled “We’re All in This Together… So Make Some Room”. He joins the Main Mommies to discuss VR games, motorcycles, mid life crises, current politics, slowly turning into your parents, his writing process, and much more! They wrap up by watching a batch of Christina’s TikTok curations.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/d7ab8009-a983-45da-b0ad-070e554390fe/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=d7ab8009-a983-45da-b0ad-070e554390fe&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "4b8d6ee0-f183-4453-8c36-6dec1fc081a9",
+          "name": "Getting In Trouble w/ Adam Friedland | Your Mom's House Ep. 715",
+          "description": "<p>Go see Tom’s new special “SledgeHammer” Available NOW on Netflix!</p><p>HOME HERE NOW!! On this week’s episode of YMH, Tom Segura and Christina P discuss the most sexual cities in the world, Tom’s new Netflix special “Sledgehammer,” issues plus sized people have when traveling, cool mid-life hobbies that Tom and Christina can pick up, and more!</p><p>The YMH staff basketball game between Enny and Ryan is over! You can watch the video here <a href=\"https://www.youtube.com/watch?v=5NZZhSOCYYc\">https://www.youtube.com/watch?v=5NZZhSOCYYc</a> . The Main Mommies and the boys in the booth recap the game, everything that went into preparing for it, and the upcoming reward for the winner.</p><p>Adam Friedland is a comedian and the host of “The Adam Friedland Show.” He joins Todd and Christine to talk about living in New York City, meeting Woody Allen and Martin Scorsese, and how a joke about Ice Spice made him come between Taylor Swift and boyfriend Matty Healy. They watch a series of videos of cool girls, weird guys traveling the world to date, a very cool horse video, and Christina’s TikTok curations.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/a57d7e91-f506-4264-83cc-957f124fc0c3/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=a57d7e91-f506-4264-83cc-957f124fc0c3&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "2b009850-971f-4bf8-9065-dfeb85f65cdc",
+          "name": "Joining Jackass w/ Rachel Wolfson | Your Mom's House Ep. 714",
+          "description": "<p>SPONSORS:<br />-Go to <a href=\"https://Saatva.com/theshit\">https://Saatva.com/theshit</a> to get $200 off ANY mattress of your choice.</p><p>OH THAT’S GONNA BE GOOD! On this week’s episode of YMH, Tom and Christina call Charo and surprise her with a trip to Israel to check out JC’s old stomping grounds. They read a follow up email about the coolest “Humans of New York” guy, which leads them to discover that a Canadian politician ran for office preaching about semen retention. They watch videos of the “Rub Rub Rub” guy and a cool new “P*ssy Worship” guy.</p><p>Rachel Wolfson is a comedian and cast member of Jackass. She joins the Main Mommies to discuss joining the Jackass crew, movies today, and of course to meet some cool guys. She is introduced to Leo, watches some “Horrible or Hilarious” clips, CP’s TikToks, and a very cool horse video. She wraps up by showing them her Instagram page Wolfie DMs which features the coolest Instagram messages she gets.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/ce5770f8-398b-4001-8085-4d2e38941e19/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=ce5770f8-398b-4001-8085-4d2e38941e19&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "df259057-30af-432c-81f5-81e36d201b04",
+          "name": "Exhibitionist  w/ Lauren Compton | Your Mom's House Ep. 713",
+          "description": "<p>Check out the newest podcast out of YMH Studios “First Date with Lauren Compton!” Episodes come out every Tuesday at 7am CT on YouTube and everywhere you can listen to podcasts!</p><p>Welcome to another action packed episode of Your Moms house Podcast with Tom Segura and Christina P! There’s too much disrespect coming from the booth, we have a “Who Done It” mystery, and we get tips from a cool guy and where to get the best wife! The main mommies review the old school Batman movie with Michael Keaton and Jack Nicholson, Horrible or Hilarious, and McDonalds AND Enny discovers that being healthy is NOT cap!<br />We then welcome comedian, influencer, and newest addition to YMH Studios, Lauren Compton! We go over Tom’s red flags when he started dating Christina, the main mommy’s 15 year anniversary coming up, and Gen Z’s newest slang! Lauren talks about getting cheated on, we watch Kevin Samuels, talk about revenge d*ck and run through some cool guys!</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/47228b8a-cfd2-438a-a703-8bfab38f817e/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=47228b8a-cfd2-438a-a703-8bfab38f817e&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "1000d8e1-ca76-49ef-95f3-9a9c04f7602e",
+          "name": "You're Not Ready w/ Matteo Lane | Your Mom's House Ep. 712",
+          "description": "<p>SPONSORS:<br />-Go to <a href=\"https://Saatva.com/theshit\">https://Saatva.com/theshit</a> to get $200 off ANY mattress of your choice.</p><p>Go see Matteo Lane’s YouTube Special <a href=\"https://www.youtube.com/watch?v=K2rxborNVsc\">“Hair Plugs and Heart Ache.”</a> </p><p>Welcome back to the Mommy-Dome with Tom Segura and Christina P! We get an update on the basketball game between Enny and Ryan, Nadav teaches us about the dangers of haggling, we discuss deep dark secrets, and we review a nightmarish chiropractic scenario.</p><p>Then we welcome our guest, Matte Lane! He tells us about his hair plug procedure, being stuck in Mexico and growing up Italian. Christina has some questions for Matteo about anal douching, if ED is cap, and if Robert Paul Champagne is his type! We analyze Mark Davis’s (owner of the Oakland Raiders) fashion choices, introduce Matteo to Leo, and finally, show him some of Christina’s insane TikTok curations.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/81516ed0-de31-4fd3-87e1-6038b52df3d0/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=81516ed0-de31-4fd3-87e1-6038b52df3d0&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "f97f75d8-5af1-480d-bb04-61345ded18ec",
+          "name": "ED Is Cap w/ Stavros Halkias | Your Mom's House Ep. 711",
+          "description": "<p>On this week’s episode of Your Mom’s House, Tom Segura and Christina P discuss the stakes of the upcoming basketball game between YMH staffers Enny and Ryan, watch a clip of Garth Brooks discussing marketing, and discuss Tom’s new special “Sledgehammer,” his VRT combat, and whether or not erectile dysfunction is cap. Also, people are still messing up Bert’s name! They watch clips of a Good Morning America host and Mark Wahlberg flubbing his name, and they have an email from someone who knew Blind Bob!</p><p>Comedian Stavros Halkias joins the Main Mommies to weigh in on the “ED is Cap” debate, discuss his fat era and new special taping. Todd and Christine introduce Stav to classic cool guys Uncle Terry, Norm Summerton, Joe, and Tony Johns. Plus, Stav shares a super cool video he found himself! They wrap up by discussing Rex from Humans of New York and Mantak Chia’s “Rub Rub Rub” video.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/a5dac1c5-032d-416d-8126-bfe1dbeb0827/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=a5dac1c5-032d-416d-8126-bfe1dbeb0827&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "ed4dd70a-e011-409e-9c89-f30e7ac0deae",
+          "name": "Breaking Beds w/ Steph Tolev | Your Mom's House Ep. 710",
+          "description": "<p>JEANS UP!! On this week’s episode, Tom and Christina recap their time in Europe, look at one of the coolest guys they’ve ever found who was featured on the Humans of New York Instagram page, who is utilizing the Rub Rub Rub Guy’s techniques, get an update about the Enny vs. Ryan basketball game, and discuss Tom's new soundboard. They watch videos of a 56 year old virgin, a cool Swedish sex guy, and an update from Dan Pena. Comedian Steph Tolev joins the Main Mommies to discuss the time an audience member threw a chair at her from the audience, her wild dating life, and much more! They introduce her to the Humans of New York cool guy, and run her through some classic YMH videos and Christina’s TikTok curations.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/a908a325-e572-4072-8ef3-a83e1dbba670/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=a908a325-e572-4072-8ef3-a83e1dbba670&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "4b559951-c407-4dfe-bec8-7253ccf0ea6b",
+          "name": "YMH Hunger Games | Your Mom's House Ep. 709",
+          "description": "<p>Christina P is coming to Canada. She’ll be in Toronto, September 7 at Bluma Appel Theatre and Winnepeg, September 8 at Club Regent Event Centre. Get your tickets at <a href=\"https://christinaponline.com\">https://christinaponline.com</a></p><p>SPONSORS:<br />-Go to <a href=\"https://Saatva.com/theshit\">https://Saatva.com/theshit</a> to get $200 off ANY mattress of your choice.</p><p>It’s a main mommies ONLY episode of YMH with Tom Segura and Christina P! They discuss some Hunger Games scenarios with the YMH staff that gets Tim upset, Bryan Johnson the anti aging doctor, and celebrity women who age gracefully. We do Horrible or Hilarious, watch sink hole clips, watch a wild dude with his pet bear, and talk about going out with bigger ladies.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/55ef1b29-5d5f-4152-b828-7d588d41e6a2/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=55ef1b29-5d5f-4152-b828-7d588d41e6a2&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "dd81024c-7f06-43db-843d-0bea292da83a",
+          "name": "Return Of The Roach w/ Josh Potter | Your Mom's House Ep. 708",
+          "description": "<p>It's an instant classic episode of YMH with Tim Segura and Christine P! We start off hot with some J stuff, wild movies that couldn't be made today, and Christina wonders if she could take a ho year on a military ship for a year. We review a medical quack's tweet about Pig Norm Summerton, give an update on the Enny VS Ryan basketball game, and hair transplants.</p><p>Then we welcome friendly neighborhood comedian, podcaster and cockroach, Josh Potter! We discuss best strategies for Only Fans, some cool dating tips from a cool guy, weight loss motivation, Lady Gaga, and Josh reveals that someone finally made him come! We introduce Potter to Blind Bob and learn more about the blind community and finish up with some TikTok curations from Christina!</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/d8b9042b-aeb8-4077-bb5b-d0d83914ab8e/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=d8b9042b-aeb8-4077-bb5b-d0d83914ab8e&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "3ecd3e3c-2bf2-4118-9e61-1f1c91cc84db",
+          "name": "Busted Selling Cartel Drugs w/ Johnny Mitchell | Your Mom's House Ep. 707",
+          "description": "<p>SPONSORS:<br />-Go to <a href=\"https://Saatva.com/theshit\">https://Saatva.com/theshit</a> to get $200 off ANY mattress of your choice.</p><p>On this week’s episode of YMH, Tom Segura and Christina P discuss Christina’s flossing habits, whether or not color blindness is cap, Tom’s VR game, developing countries, and more! They watch videos of a dude crawling through a cave, a cool girl explaining how she got strep throat from licking brown, and another cool girl revealing her man gets to nut 7 times a day. This leads to a conversation about Scottie Pippen and his then wife having sex 4 times a day for years!</p><p>Johnny Mitchell is a comedian, the host of the podcast “The Connect,” and a former drug trafficker. He joins the Main Mommies to discuss how he became a drug dealer, graduating to higher levels of drug dealing, where he would hide money, how he sold drugs in the mail, working with the cartels, and how he finally got arrested. He reveals what it’s like to be new in prison, and discusses prison gangs, fights, food, strip searches, and much more! Tim and Christine introduce him to the 4 Stroke Guy and the Gangsters in Syria.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/152e8a1e-d630-4989-b1cb-edaf8ea76ceb/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=152e8a1e-d630-4989-b1cb-edaf8ea76ceb&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "4bf10e0e-d935-4453-9c46-448ff8dd8f31",
+          "name": "Tom Saves America w/ Chris Porter | Your Mom's House Ep. 706",
+          "description": "<p>Watch Chris Porter’s new YouTube special “There’s No Money In Babies”  available now: <a href=\"https://youtu.be/NlrJ_Qkmreo\">https://youtu.be/NlrJ_Qkmreo</a> Tom Segura and Christina P are so incredibly excited for the Enny VS Ryan basketball game! Tom’s new soundboard is officially up and running, Christina shares some spoiler alerts, and shares things that made you laugh growing up that still make you laugh. Tom continues the fight for our country in virtual reality and the mommies discuss body inclusivity.</p><p>Then we welcome stand up comedian Chris Porter! We discuss wild snoring habits, totally being okay with not doing stuff with your spouse, airplane seating BS, and the Segura’s getting an invitation to the The White House! We learn more about blind people, Blind Bob, and quiz Christina on the difference between more animals. Then we wrap up with torturing Chris with some TikTok!</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/b89617c6-60e5-442c-be12-23df60e6b2d6/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=b89617c6-60e5-442c-be12-23df60e6b2d6&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "648ab2fc-6104-4881-b03a-734c9f012134",
+          "name": "Raising The Stakes | Your Mom's House Ep. 705",
+          "description": "<p>SPONSORS:<br />-Go to <a href=\"https://Saatva.com/theshit\">https://Saatva.com/theshit</a> to get $200 off ANY mattress of your choice.</p><p>Tom Segura and Christina P. Would like to cordially invite you back to the Mommy Dome! What age range is appropriate to date? We open with a clip of a cool guy who got beat up by a girl, Christina continues to learn about the animal kingdom, we dive deeper into Enny and Ryan basketball game AND Enny seems to have cracked Tom’s color coding system for his soundboard! We get an update on ol’ Sh!t Eyes aka Blind Bob, continue our MASSIVE campaign to send Tom to space, and we reinforce that absolutely everyone you know will die at some point. How neat!</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/27373471-349b-4a7e-a82d-38fdc7b7f120/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=27373471-349b-4a7e-a82d-38fdc7b7f120&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "1f0269a6-83cc-4ab1-b09f-c87b017a7faf",
+          "name": "Dating Apps w/ Jay Larson | Your Mom's House Ep. 704",
+          "description": "<p>PULL YOUR JEANS UP!! On this week’s episode of Your Mom’s House, Tom Segura and Christina P discuss Tom’s plan to come in space, the possibility of another basketball game between two YMH staffers, and Tom’s new favorite activity: farting in front of and winking at Nadav. They watch some “Barista I Love You” videos sent in from friends of the show, as well as an update from the Dating Advice Cool Guy on “narcissistic game.”</p><p>Comedian Jay Larson joins the Main Mommies to discuss his new special, “Sounds Like Bruce,” life as a dad, dating in the modern age, Vespas, and much more! Tim and Crystal introduce Jay to Blind Bob, teach him about narcissistic game, and show his some of Christina’s TikTok curations.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/39de0f69-a03e-401c-9341-2c16f991bb3b/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=39de0f69-a03e-401c-9341-2c16f991bb3b&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "38ffe8b1-c377-4a8c-9f65-b9e27d95bf3e",
+          "name": "Is YMH Garbage? w/ H. Foley & Kevin Ryan | Your Mom's House Ep. 703",
+          "description": "<p>Get tickets to see the AYG guys at <a href=\"https://areyougarbage.com/\">https://areyougarbage.com</a></p><p>We are updating our channel memberships! You now get more content for the same low prices! Become a member today by clicking the join button above or going here: <a href=\"https://www.youtube.com/channel/UCYIgiXwJck_Pb5Nj-wIrsqg/join\">https://www.youtube.com/channel/UCYIgiXwJck_Pb5Nj-wIrsqg/join</a></p><p>Welcome back to the Mommy Dome with Tom Segura and Christina P! We open with a clip of our favorite drunk guy, we talk about how hard it is to be a drunk, drugs, NASCAR and Joe Rogan's new Austin comedy club The Comedy Mothership. We revisit Blind Bob, watch Dr. Now yell at some big patients, talk about one of the pickiest eaters they've encountered, and share stories of their wild kids.<br />Then, we welcome comedians and co-hosts of the podcast Are You Garbage, H. Foley and Kevin Ryan! We talk wash cloths, hygiene, introduce the guys to Blind Bob and give Christina a pop quiz on Cheetahs and Leopards. They talk about garbage food tendencies, garbage education and review Christina's TikTok curations.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/06245da5-f68f-4f00-92a8-2aac15486c58/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=06245da5-f68f-4f00-92a8-2aac15486c58&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "611f2e8f-96bf-443c-9d7c-dca92c170757",
+          "name": "Bathroom Stunts w/ Ryan Sickler | Your Mom's House Ep. 702",
+          "description": "<p>Go watch Ryan Sickler's special \"Lefty's Son\" on YouTube RIGHT now: <a href=\"https://www.youtube.com/watch?v=AXGHgyr2MNA\">https://www.youtube.com/watch?v=AXGHgyr2MNA</a></p><p>SPONSORS:<br />- Go to <a href=\"https://Saatva.com/theshit\">https://Saatva.com/theshit</a> to get $200 off ANY mattress of your choice.</p><p>Pull those jeans all the way over your head, because Tom Segura is coming everywhere and it might get on you. We check in on Unk Shine, follow up on coming with your dad, Lady Gaga and watch another batch of \"Barista, I Love You\" videos.<br />We then welcome podcaster, standup comedian and oldschool YMH favorite, Ryan Sickler! He tells us about his recent medical flare up, we introduce him to Blind Bob, we have some brown talk, and take a look at a WILD batch of horrible or hilarious clips. Ryan Sickler brings a wash cloth to the table, we watch a WILD Chiro video, we follow up on the TikTok with the cool nose ring, review more tramp stamps, and Christina’s TikTok curations.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/10e884e5-5e4f-477e-bf93-758010c565c6/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=10e884e5-5e4f-477e-bf93-758010c565c6&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "80632b26-753e-46c9-8766-2accd96c7388",
+          "name": "Coming In Space | Your Mom's House Ep. 701",
+          "description": "<p>SPONSORS:</p><p>-Go to <a href=\"https://Saatva.com/theshit\">https://Saatva.com/theshit</a> to get $200 off ANY mattress of your choice.</p><p>Welcome back to your favorite mothers’ house with Tom Segura and Christina P! Nadav is back from gambling rehab, we find the coolest blind guy, Tom reports on a murder that’s fun for the whole family, and we recap the incredible basketball game between Tom and Erie weatherman David Wolter. Tim tries to compliment Christine, Tom stands with Hilaria Baldwin, Christina makes a worrying discovery about herself and figure out the difference between cheetahs and leopards. We find out about a cool girl who’s REALLY into aircrafts, we revisit was cloths, and we investigate the questions about space that no one is asking.</p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/7b84516c-eafb-4c0f-a5ab-54668c7cb882/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=7b84516c-eafb-4c0f-a5ab-54668c7cb882&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "dae24c38-544c-4427-8f8a-dd1d48f25f8b",
+          "name": "When A.I. Strikes Back w/ Brian Simpson | Your Mom's House Ep. 700",
+          "description": "<p>Welcome back to the mommydome with Tom Segura and Christina P! What bodily functions are you ok with in the shower? Where are you ok with taking a Big D? The mommies are asking the right questions. And because it's episode 700, the main mommies review some of their favorite clips from the last 100 episodes.<br />We then welcome comedian and podcaster Brian Simpson! We talk about robot dogs, fighter jets and why Brian apologizes to his Google Home. They talk about the enigma that is Bert Kreischer, fitness, and how Remi Bader wasn't allowed on a horse on a ranch. We review more terrible lower back tattoos, and ho's at work. See Brian live in your town at <a href=\"https://www.briansimpsoncomedy.com/\">https://www.briansimpsoncomedy.com/</a></p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/157f3780-2927-443f-91bd-d5ca9076f56f/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=157f3780-2927-443f-91bd-d5ca9076f56f&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "108ed8b5-2764-4da2-abe2-b1acfd8c759d",
+          "name": "Grossed Out | Your Mom's House Ep. 699",
+          "description": "<p>SPONSORS:</p><p>-Go to <a href=\"https://Saatva.com/theshit\">https://Saatva.com/theshit</a> to get $200 off ANY mattress of your choice.</p><p>Mommies only this week in the mommy-dome with Tom Segura and Christina P. We talk about a fun box of DVD's Tom had, false advertising, and big D problems. Would you rather be 400 lbs or have your spouse be 400 lbs? The fans weigh in! Christina surprises Tom with a disgusting booger confession from Ali Macofsky and Christina asks Tom maybe the coolest question of all time. They discuss sharing tapes with your dad, where the most loads get spilled, some of the worst tattoos you've EVER seen, and Dhar Mann's actors protesting. Christina argues a bold defense strategy for Leonardo DiCaprio, they discuss Jonah Hill's Netflix documentary \"Stutz,\" and we follow up on the roommate from hell. We watch a super cool Chiro adjustment, see more mommies telling their baristas they love them, Starbucks, TikToks and Nature is Metal.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/4f61333f-550b-4cde-a90b-81efb3337422/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=4f61333f-550b-4cde-a90b-81efb3337422&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "91a4f0ee-f629-468e-958d-2f0f5485d6e4",
+          "name": "North Korea Tourism w/ Duncan Trussell | Your Mom's House Ep. 698",
+          "description": "<p>Welcome back to the Mommy Dome with tom Segura and Christina P! Tom addresses the rumors about his DSL’s, the general behavior of dudes, Jamie Lee Curtis and where Nadav has been. The mommies review more of the worst tramp stamps the fans submitted and the new Netflix show “My Lover, My Killer.”</p><p>We then welcome comedian and podcaster Duncan Trussell! They talk about their end of life plans, banging in MRI machines, and burping in space, and death ceremonies. The mommies show Duncan some horrible or hilarious clips, cool people promoting the Philippines and North Korea. Tom talks about meeting Jason Mamoa, we see a roommate from hell, how Duncan got into the Comedy Store, and a cool guy that gives tips to dudes on how to pick up women.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/c3ca0a17-2567-438d-8398-b0d3dd130e20/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=c3ca0a17-2567-438d-8398-b0d3dd130e20&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "908540dc-a065-4926-b483-4389ca6a2974",
+          "name": "Trailer Trash Tammy w/ Chelcie Lynn | Your Mom's House Ep. 697",
+          "description": "<p>JEANS UP!! This week, Tom Segura and Christina P discuss why you can’t burp in space, Tom’s experience at the Daytona 500, Instagram models, and gives an update on his basketball game against Erie, PA weatherman David Wolter. They watch videos of a dude explaining how to clean up before a girl comes over, and some listener-submitted videos of saying “I love you” at drive thrus.<br />Chelcie Lynn joins the Main Mommies to discuss creating her character Trailer Trash Tammy, her upbringing in Oklahoma, Hilaria Baldwin, farts, the music Tim and Christine play for their kids, sleeping masks, Pazsitzky Effects, and much more! They wrap up by watching a batch a CP’s TikTok curations.</p><p> </p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/757cd31e-e81e-44f7-9dfa-904459611e7a/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=757cd31e-e81e-44f7-9dfa-904459611e7a&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "2a37f88d-ae88-4384-820a-90cca02a753b",
+          "name": "You're Fired! w/ Matt Fulchiron | Your Mom's House Ep. 696",
+          "description": "<p>Sponsors:</p><p>-Go to <a href=\"https://Saatva.com/theshit\">https://Saatva.com/theshit</a> to get $200 off ANY mattress of your choice.</p><p>Unfortunately, Christina P is no longer with us, but Matt Fulchiron joins Tom Segura in her place. Matt and Tom discuss marriage and religion, share some of their wildest stories about confrontations, discuss the time Matt worked for Tom, as well as the time that Matt accidentally hooked up with a prostitute. They watch videos of a heated confrontation between a grown man and some teenagers, a freakout in an appliance store, Elton John going off on one of his audio techs, a “sissy” Cool Guy, and an update from Erie weatherman David Wolter.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/11ec40d6-9bba-497c-a84f-5d2461180c14/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=11ec40d6-9bba-497c-a84f-5d2461180c14&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "d0cb1175-3a1d-4497-91f8-9a37a4c62364",
+          "name": "Valentine's Day Sucks! | Your Mom's House Ep. 695",
+          "description": "<p>HAPPY VALENTIME’S DAY!! On this week’s episode of YMH, Tom Segura and Christina P give their best advice for surviving Valentine’ Day, Tom responds to some listeners about where he actually came on his tour, the mommies give an update on their eye mask revelation, they take a look at some tramp stamps that give Christina a run for her money, and they discuss one of Top Dog’s truest loves: t*ts. They watch a cool update video from Unk Shine, whose camera is, of course, not facing the right way, and a girl showing off some awesome farts!</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/cb438bf0-a0b3-4ca7-b40d-1ec62151341a/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=cb438bf0-a0b3-4ca7-b40d-1ec62151341a&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "f63ccb02-5041-4591-a3a1-f67d0269719a",
+          "name": "Gnarly Skate Stories w/ Tony Hawk & Jason Ellis | Your Mom's House Ep. 694",
+          "description": "<p>SPONSORS:</p><p>-Go to <a href=\"https://Saatva.com/theshit\">https://Saatva.com/theshit</a> to get $200 off ANY mattress of your choice.</p><p>TOM’S COMING EVERYWHERE!! Well, not quite everywhere… This week, Tom reveals where he has come, the Main Mommies debate whether you should sleep with an eye mask, they get an update from Erie weatherman David Wolter, discuss a super cool “Would You Rather” question, and get a final verdict on Burpgate from the expert himself: Dr. Drew.</p><p>Tony Hawk and Jason Ellis are pro-skateboarders and hosts of the “Hawk vs. Wolf” podcast. They join Tim and Crystal to discuss their worst skateboarding injuries, Tony’s first ever 900, Tom’s surfing skills, terrible tattoos, their craziest sex stories, Ellismania, and they watch some “Horrible or Hilarious” videos.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/6cdbaed7-94b6-4824-b7f8-43019300d1d2/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=6cdbaed7-94b6-4824-b7f8-43019300d1d2&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "7b961607-cbb6-4a1a-8485-5582f1aaf0e2",
+          "name": "Dating Old People w/ Brian Redban | Your Mom's House Ep.693",
+          "description": "<p>SPONSORS:</p><p>- Head to <a href=\"https://policygenius.com\">https://policygenius.com</a> to get your free life insurance quotes and see how much you could save.</p><p>Pull your jeans all the way over your head this week with Tim and Kirstin! Christina announces to her first brown ever at the studio, he recently getting over vomit, and no one enjoys sneezes more than Tom. We have a cool guy opening clip, a cool Florida realtor, and Tom and Christina have started playing the pushing game again. Then, we see which mommy has nastier flossing habits.</p><p>We then welcome comedian and godfather of podcasting, Brian Redban from the Joe Rogan Experience and Kill Tony! They talk about the early days of podcasting, supplementing with Testosterone, and hooking up with old people. We discuss some special people, getting cosmetic work done, Sex and The City, a cool double jointed girl, and Ari Shaffir’s very weird body. We revisit the cool guy that hates dating women in America, breastfeeding, and Christina’s latest TikTok curations.</p><p><a href=\"https://tomsegura.com/tour\">https://tomsegura.com/tour</a><br /><a href=\"https://christinaponline.com/tour-dates\">https://christinaponline.com/tour-dates</a><br /><a href=\"https://store.ymhstudios.com/\">https://store.ymhstudios.com/</a><br /><a href=\"https://www.reddit.com/r/yourmomshousepodcast\">https://www.reddit.com/r/yourmomshousepodcast</a></p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/3d36b4f8-3132-4dbc-87bd-52b5ecb134d7/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=3d36b4f8-3132-4dbc-87bd-52b5ecb134d7&feed=RpkoyXpU"
+        },
+        {
+          "uuid": "20d09d8e-22b8-4454-ac8c-e262ca990e2c",
+          "name": "The Best Sex Life w/ Andrew Santino | Your Mom's House Ep.692",
+          "description": "<p>Watch Andrew Santino’s Standup Comedy Special “Cheeseburger” streaming now on Netflix!</p><p> </p><p>SPONSORS:</p><p>- Go to https://Saatva.com/theshit to get $200 off ANY mattress of your choice.</p><p>- Grab your Liquid I.V. in bulk nationwide at Costco or you can get 20% off when you go to http://LiquidIV.com and use code HOUSE at checkout</p><p> </p><p>Welcome back to the Mommy Dome with Tom Segura and Christina P and we are still recovering from Charo’s recent visit. We watch some clips about pronouns/gender, discuss #BurpGate, and Tom announces David Wolter the Eerie weatherman has accepted his basketball challenge.</p><p> </p><p>We then welcome comedian, podcaster and actor, Andrew Santino! Go watch his special “Cheeseburger” on Netflix now! They talk about weird fan interactions, working with Bobby Lee, we watch a clip of a cool girl going over her sex stats for the year, discuss Prince Harry getting frostbite on his Cory and having sex abroad. The Mommies introduce Santino to Sam’s Tailor, watch a girl on TikTok who apparently didn’t kill her brother, and review Christina’s latest TikTok curations.  </p><p> </p><p>https://tomsegura.com/tour</p><p>https://christinaponline.com/tour-dates</p><p>https://store.ymhstudios.com/</p><p>https://www.reddit.com/r/yourmomshousepodcast</p>\n",
+          "audioUrl": "https://dts.podtrac.com/redirect.mp3/pdst.fm/e/chrt.fm/track/288D49/stitcher.simplecastaudio.com/bb5948cd-50b8-4042-b16f-2557631e4bb4/episodes/f4a45a9c-7272-4629-8f58-be373553aa82/audio/128/default.mp3?aid=rss_feed&awCollectionId=bb5948cd-50b8-4042-b16f-2557631e4bb4&awEpisodeId=f4a45a9c-7272-4629-8f58-be373553aa82&feed=RpkoyXpU"
+        }
+      ],
+      "totalEpisodesCount": 683,
+      "genres": [
+        "PODCASTSERIES_COMEDY_INTERVIEWS",
+        "PODCASTSERIES_COMEDY",
+        "PODCASTSERIES_SOCIETY_AND_CULTURE_RELATIONSHIPS",
+        "PODCASTSERIES_SOCIETY_AND_CULTURE"
+      ],
+      "itunesInfo": {
+        "uuid": "a5051125-9979-44ef-b161-d35c07fcb3a2",
+        "hash": "776a419a4dcd8ec47b7177e53b38808de3301cbbc61f2bcbfc0d4c3ef78f34dd",
+        "subtitle": null,
+        "summary": "Christina Pazsitzky and Tom Segura are comedians who are also married. They are the Mommies and they welcome you to join them. Dental updates! Dudes! Stories! Wiping!",
+        "baseArtworkUrl": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts116/v4/e1/75/13/e17513c5-33a2-1773-c8fc-31cf8718329e/mza_7900122563944916752.jpg/",
+        "baseArtworkUrlOf": "https://is5-ssl.mzstatic.com/image/thumb/Podcasts116/v4/e1/75/13/e17513c5-33a2-1773-c8fc-31cf8718329e/mza_7900122563944916752.jpg/undefinedxundefinedbb.png",
+        "publisherId": 1534353403,
+        "publisherName": "YMH Studios",
+        "country": "UNITED_STATES_OF_AMERICA"
+      },
+      "seriesType": "EPISODIC",
+      "language": "ENGLISH",
+      "contentType": "AUDIO",
+      "isExplicitContent": true,
+      "copyright": "251327",
+      "websiteUrl": "https://ymhstudios.com",
+      "rssUrl": "https://feeds.simplecast.com/RpkoyXpU",
+      "rssOwnerName": "Tom Segura",
+      "rssOwnerPublicEmail": "nadav@ymhpodcasts.com",
+      "authorName": "YMH Studios",
+      "feedRefreshDetails": {
+        "uuid": "a5051125-9979-44ef-b161-d35c07fcb3a2",
+        "priority": "WEBSUB",
+        "priorityReason": null,
+        "dateLastRefreshed": 1689216704
+      },
+      "isCompleted": false,
+      "isBlocked": null
+    }
+  }
+}
