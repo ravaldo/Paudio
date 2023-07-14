@@ -1,6 +1,11 @@
-import './App.css';
+import React, {useState, useEffect} from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AudioPlayer from 'react-h5-audio-player';
+import Header from "./components/Header";
+
+import './App.css';
 import 'react-h5-audio-player/lib/styles.css';
+
 
 function App() {
 
@@ -9,15 +14,40 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Podcast App</h1>
+      <Router >
+          <Header />
+          <h1>sfsfs</h1>
+          <h1>sfsfs</h1>
 
-      <AudioPlayer
-        autoPlay
-        src={audio_url}
-        onPlay={e => console.log("onPlay")}
-      // other props here
-      />
+          <h1>sfsfs</h1>
 
+          <h1>sfsfs</h1>
+
+          <h1>sfsfs</h1>
+          <h1>sfsfs</h1>
+          <h1>sfsfs</h1>
+          <h1>sfsfs</h1>
+          <h1>sfsfs</h1>
+          <h1>sfsfs</h1>
+          <h1>sfsfs</h1>
+          <h1>sfsfs</h1>
+          <h1>sfsfs</h1>
+          <h1>sfsfs</h1>
+          <h1>sfsfs</h1>
+          <h1>sfsfs</h1>
+
+            <Routes>
+              <Route path="/library" />
+              <Route path="/search" />
+              <Route path="/browse" />
+            </Routes>
+        </Router>
+        <AudioPlayer
+          autoPlay
+          src={audio_url}
+          onPlay={e => console.log("onPlay")}
+        // other props here
+        />
     </div>
   );
 }

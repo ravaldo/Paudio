@@ -1,0 +1,15 @@
+.App {
+    /* background-color: brown; */
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+.rhap_container {
+    background-color: red;
+    bottom: 0;
+    position: fixed;
+}
