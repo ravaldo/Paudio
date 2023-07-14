@@ -18,11 +18,8 @@ function App() {
           <Header />
           <h1>sfsfs</h1>
           <h1>sfsfs</h1>
-
           <h1>sfsfs</h1>
-
           <h1>sfsfs</h1>
-
           <h1>sfsfs</h1>
           <h1>sfsfs</h1>
           <h1>sfsfs</h1>
