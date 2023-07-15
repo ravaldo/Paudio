@@ -1,18 +1,19 @@
 .App {
-    /* background-color: brown; */
+    background-color: #222;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    color: whitesmoke;
 }
 
 
 
 
-/* .rhap_container {
-    background-color: red;
+.rhap_container {
+    background-color: #222;
     bottom: 0;
     position: fixed;
-} */
+}
 
 .player_footer {
     color: white;
