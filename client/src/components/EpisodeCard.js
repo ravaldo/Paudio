@@ -3,9 +3,8 @@ import React from 'react';
 
 const EpisodeCard = ({episode}) =>{
 
-
-    const dummy = null;
-
+    if (!episode)
+    return null;
 
     return (
         <>

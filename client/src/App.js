@@ -11,6 +11,7 @@ import Search from "./components/Search";
 import Test from "./components/Test";
 import EpisodeList from "./components/EpisodeList";
 
+
 function App() {
 
   const [playList, setPlayList] = useState ([]);
@@ -28,13 +29,13 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Test />} />
-            <Route path="/episodes" element={<EpisodeList podcastName="True Crime Garage" />} />
+            <Route path="/episodes" element={<EpisodeList  />} />
             <Route path="/search" element={<Search />} />
           </Routes>
         </div>
       </Router>
       <AudioPlayer
-        autoPlay
+        // autoPlay
         src={audio_url}
         onPlay={e => console.log("onPlay")}
         showSkipControls={playList.length > 1}
