@@ -10,7 +10,7 @@ import TaddyService from './services/TaddyService'
 import Search from "./components/Search";
 import Test from "./components/Test";
 import EpisodeList from "./components/EpisodeList";
-
+import Error from "./components/Error";
 
 function App() {
 
@@ -31,6 +31,7 @@ function App() {
             <Route path="/" element={<Test />} />
             <Route path="/episodes" element={<EpisodeList podcastName="True Crime"/>} />
             <Route path="/search" element={<Search />} />
+            <Route path="/*" element={<Error />} />
           </Routes>
         </div>
       </Router>
