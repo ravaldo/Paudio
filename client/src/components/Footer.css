@@ -8,11 +8,12 @@
     /* padding: 10px; */
     margin: 10px;
     display: flex;
- 
+    flex-direction: column;
 }
 
 .icon {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
 }
 
