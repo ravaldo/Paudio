@@ -1,19 +1,15 @@
 .Footer {
-    height: 10pvh;
-    width: 100%;
-    background-color: black;
-    color: white;
-    bottom: 0;
-    position: fixed;
-    /* padding: 10px; */
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
+    background-color: #222;
 }
 
 .icon {
+    
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: space-between;
-}
+} 
 
+.icon a{
+    color: whitesmoke;
+    margin: 0 50px;
+}
