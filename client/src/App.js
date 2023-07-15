@@ -32,6 +32,7 @@ function App() {
             <Route path="/episodes" element={<EpisodeList podcastName="True Crime"/>} />
             <Route path="/search" element={<Search />} />
             <Route path="/*" element={<Error />} />
+            
           </Routes>
         </div>
       </Router>

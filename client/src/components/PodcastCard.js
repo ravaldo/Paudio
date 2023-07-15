@@ -1,8 +1,8 @@
 import React from 'react'
 
-const PodcastCard = ({podcast}) => {
+const PodcastCard = ({podcastSeries}) => {
 
-    if (!podcast)
+    if (!podcastSeries)
     return null;
 
 

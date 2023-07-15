@@ -1,11 +1,13 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
+import TaddyService from '../services/TaddyService';
+import PodcastCard from './PodcastCard';
 
-const PodcastList = ({podcasts}) => {
+const PodcastList = ({podcastSeries}) => {
 
     const [podcasts, setPodcasts] = useState([]);
 
     useEffect( () => {
-        TaddyService.searchForSeries(podcasts)
+        TaddyService.searchForSeries(podcastSeries.name)
         .then(data => setPodcasts(data))
     }, []);
 
@@ -13,10 +15,10 @@ const PodcastList = ({podcasts}) => {
     if (podcasts.length === 0)
     return ;
     
-    const podcastsList = podcasts.series.map ( p => {
+    const podcastsList = podcasts.podcastSeries.map ( p => {
         return (
             <>
-            <p>this is where the podcast series info will go</p>
+            <PodcastCard podcast={p} key={p.uuid} />
             </>
         )
     });
