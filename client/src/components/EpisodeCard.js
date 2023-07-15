@@ -30,7 +30,7 @@ const EpisodeCard = ({ episode }) => {
           <div className="episodeInfo">
             <h4 className="episodeName">{episode.name}</h4>
             <p className="episodeDuration">Duration: {episodeDuration()}</p>
-            <p>{episodeDate}</p>
+            <p className="episodeDate">{episodeDate}</p>
             
           </div>
         </div>

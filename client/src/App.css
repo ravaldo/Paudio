@@ -1,15 +1,24 @@
 .App {
-    
+    background-color: #222;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: whitesmoke;
 }
 
-.content {
-    padding-top: 10vh;
+
+
+
+.rhap_container {
     background-color: #222;
-    color: #ddd;
+    bottom: 0;
+    position: fixed;
 }
 
-.App .rhap_container {
-    background-color: #222;
+.player_footer {
+    color: white;
+    background-color: black;
+    width: 100%;
     bottom: 0;
     position: fixed;
 }

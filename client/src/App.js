@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AudioPlayer from 'react-h5-audio-player';
 import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 import './App.css';
 import 'react-h5-audio-player/lib/styles.css';
@@ -37,7 +38,7 @@ function App() {
         </div>
       </Router>
       <AudioPlayer
-        // autoPlay
+        autoPlay
         src={audio_url}
         onPlay={e => console.log("onPlay")}
         showSkipControls={playList.length > 1}
