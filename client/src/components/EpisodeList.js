@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react'
 import EpisodeCard from "./EpisodeCard";
 import TaddyService from '../services/TaddyService';
+import './EpisodeList.css'
 
 
 
@@ -27,7 +28,6 @@ const EpisodeList = ({ podcastName }) => {
 
     return (
         <>  
-            <p>hello from episodeslist</p>
             {episodesList}
         </>
     );
