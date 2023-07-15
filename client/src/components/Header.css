@@ -1,7 +1,8 @@
 .Header {
-    height: 10pvh;
+    min-height: 10vh;
     width: 100%;
-    background-color: black;
+    background-color: #222;
     color: white;
     position: fixed;
+    z-index: 10;
 }
