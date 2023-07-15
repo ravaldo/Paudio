@@ -1,4 +1,5 @@
 import React from 'react';
+import './EpisodeCard.css'
 
 
 const EpisodeCard = ({episode}) =>{
@@ -7,13 +8,11 @@ const EpisodeCard = ({episode}) =>{
     return null;
 
     return (
-        <>
-            <p>{episode.name}</p>
-            {/* <h4 className = "episodeName" >{podcastEpisode.name}</h4>
-            <img className = "episodeImage" src= {podcastEpisode.imageURL} alt = {`this is an image of ${podcastEpisode.name}`}> </img>
-            <h6 className="episodeDuration">{podcastEpisode.duration}</h6> */}
-            {/* <button onClick = {dummy}> ▶️ </button> */}
-        </>
+        <div>
+            <h4 className = "episodeName" >{episode.name}</h4>
+            <img className = "episodeImage" src={episode.imageUrl} alt = {`this is an image of ${episode.name}`} />
+            <h6 className="episodeDuration">{episode.duration}</h6>
+        </div>
     )
 }
 

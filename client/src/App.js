@@ -29,7 +29,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Test />} />
-            <Route path="/episodes" element={<EpisodeList  />} />
+            <Route path="/episodes" element={<EpisodeList podcastName="True Crime"/>} />
             <Route path="/search" element={<Search />} />
           </Routes>
         </div>

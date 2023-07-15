@@ -86,6 +86,7 @@ const TaddyService = {
             name
             description
             audioUrl
+            imageUrl
           }
           totalEpisodesCount
           genres
