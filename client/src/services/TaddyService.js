@@ -1,5 +1,6 @@
-import dummySearch from "./dummySearch";
 import taddy_cred from "./apikey";
+import dummySearch from "./dummySearch";
+import dummyEpisodes from "./dummyEpisodes";
 
 
 const baseURL = 'https://api.taddy.org/';
@@ -110,14 +111,13 @@ const TaddyService = {
           rssOwnerPublicEmail
           authorName
         }
-        }
       }
     `;
 
     const variables = { term };
 
     if (returnDummyData)
-      return dummySearch;
+      return dummyEpisodes;
     return fetch(baseURL, {
       method: 'POST',
       body: JSON.stringify({
@@ -131,7 +131,7 @@ const TaddyService = {
       }
     })
       .then(res => res.json())
-      .then(response => response)
+      .then(response => response.data.getPodcastSeries)
       .catch(error => {
         console.error('Error:', error);
       })

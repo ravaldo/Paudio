@@ -9,6 +9,7 @@ import 'react-h5-audio-player/lib/styles.css';
 import TaddyService from './services/TaddyService'
 import Search from "./components/Search";
 import Test from "./components/Test";
+import EpisodeList from "./components/EpisodeList";
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <div className="content">
           <Routes>
             <Route path="/" element={<Test />} />
+            <Route path="/episodes" element={<EpisodeList podcastName="True Crime Garage" />} />
             <Route path="/search" element={<Search />} />
           </Routes>
         </div>
