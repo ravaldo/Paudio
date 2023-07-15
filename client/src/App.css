@@ -1,15 +1,11 @@
 .App {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    background-color: black;
+    
 }
 
 .content {
     padding-top: 10vh;
     background-color: #222;
     color: #ddd;
-    flex-grow: 1;
 }
 
 .App .rhap_container {

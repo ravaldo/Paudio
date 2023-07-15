@@ -7,18 +7,25 @@ const baseURL = 'https://api.taddy.org/';
 const returnDummyData = true;
 
 const TaddyService = {
-  search(term) {
+  searchForSeries(term) {
     const query = `
       query SearchQuery($term: String!) {
-        searchForTerm(term: $term, filterForTypes: PODCASTSERIES) {
+        searchForTerm(term: $term, filterForTypes: PODCASTSERIES, page:1, limitPerPage:25) {
           searchId
           podcastSeries {
             uuid
+            datePublished
             name
-            rssUrl
+            authorName
             description
+            rssUrl
             imageUrl
+            websiteUrl
+            hash
+            childrenHash
             totalEpisodesCount
+            
+            itunesId
             itunesInfo {
               uuid
               hash
@@ -54,7 +61,10 @@ const TaddyService = {
       }
     })
       .then(res => res.json())
-      .then(response => response.data.searchForTerm.podcastSeries);
+      .then(response => response.data.searchForTerm.podcastSeries)
+      .catch(error => {
+        console.error('Error:', error);
+      })
   }
 };
 
