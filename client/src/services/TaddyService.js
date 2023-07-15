@@ -25,7 +25,6 @@ const TaddyService = {
             hash
             childrenHash
             totalEpisodesCount
-            
             itunesId
             itunesInfo {
               uuid
@@ -84,9 +83,14 @@ const TaddyService = {
           episodes(sortOrder:LATEST, page:1, limitPerPage:25){
             uuid
             name
+            datePublished
             description
             audioUrl
             imageUrl
+            fileLength
+            fileType
+            duration
+            podcastSeries
           }
           totalEpisodesCount
           genres
