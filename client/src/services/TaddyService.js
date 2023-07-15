@@ -65,7 +65,80 @@ const TaddyService = {
       .catch(error => {
         console.error('Error:', error);
       })
+  },
+
+
+  searchForEpisodes(term) {
+    const query = `
+      query SearchQuery($term: String!) {
+          getPodcastSeries(name: $term){
+          uuid
+          datePublished
+          name
+          description
+          imageUrl
+          itunesId
+          hash
+          childrenHash
+          episodes(sortOrder:LATEST, page:1, limitPerPage:25){
+            uuid
+            name
+            description
+            audioUrl
+          }
+          totalEpisodesCount
+          genres
+          itunesInfo {
+            uuid
+            hash
+            subtitle
+            summary
+            baseArtworkUrl
+            baseArtworkUrlOf
+            publisherId
+            publisherName
+            country
+          }
+          seriesType
+          language
+          contentType
+          isExplicitContent
+          copyright
+          websiteUrl
+          rssUrl
+          rssOwnerName
+          rssOwnerPublicEmail
+          authorName
+        }
+        }
+      }
+    `;
+
+    const variables = { term };
+
+    if (returnDummyData)
+      return dummySearch;
+    return fetch(baseURL, {
+      method: 'POST',
+      body: JSON.stringify({
+        query,
+        variables
+      }),
+      headers: {
+        'Content-Type': 'application/json',
+        'X-USER-ID': taddy_cred['X-USER-ID'],
+        'X-API-KEY': taddy_cred['X-API-KEY']
+      }
+    })
+      .then(res => res.json())
+      .then(response => response)
+      .catch(error => {
+        console.error('Error:', error);
+      })
+
   }
+
+
 };
 
 export default TaddyService;
