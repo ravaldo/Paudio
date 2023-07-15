@@ -3,13 +3,15 @@
 }
 
 .icon {
-    
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
 } 
 
 .icon a{
     color: whitesmoke;
-    margin: 0 50px;
+    margin: 1 50px;
+    display: flex;
 }
