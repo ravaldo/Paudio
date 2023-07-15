@@ -1,5 +1,5 @@
 import dummySearch from "./dummySearch";
-import taddy_cred from "./.apikey";
+import taddy_cred from "./apikey";
 
 
 const baseURL = 'https://api.taddy.org/';
