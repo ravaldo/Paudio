@@ -1,6 +1,25 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
+import './Header.css'
 
-const Header = () => {
+const Header = ({ toggleLightDark, lightDark }) => {
+    const currentPage = useLocation();
+
+    const getCurrentPage = () => {
+        if (currentPage.pathname === '/episodes') {
+            return <h2>Browse Podcast Episodes</h2>;
+        }
+        else if (currentPage.pathname === '/browse') {
+            return <h2>Browse Podcasts</h2>
+        }
+        else if (currentPage.pathname === '/search') {
+            return <h2>Search for Podcasts</h2>
+        }
+        else return <h2>Welcome Home</h2>
+    };
+
     const greeting = new Date();
     const hrs = greeting.getHours();
 
@@ -15,8 +34,21 @@ const Header = () => {
     }
 
     return (
-        <div className='Header'>
-            <h1>{greet}</h1>
+        <div className={`Header ${lightDark}`}>
+            <div className='header-container'>
+                <div>
+                    <h1>{greet}</h1>
+                    {getCurrentPage()}
+                </div>
+                <div>
+                    <p>
+                        <FontAwesomeIcon
+                            icon={faLightbulb} size='2x' onClick={toggleLightDark}>
+                        </FontAwesomeIcon>
+                    </p>
+                    <p className='lightdark'>Light/Dark </p>
+                </div>
+            </div>
         </div>
     );
 };

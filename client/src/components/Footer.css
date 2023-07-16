@@ -5,6 +5,10 @@
     padding: 13px 0;
 }
 
-.Footer a {
-    color: #f5f5f5;
+
+.Footer.dark a {
+    color: whitesmoke;
+}
+.Footer.light a {
+    color: #222;
 }

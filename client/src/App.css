@@ -1,4 +1,4 @@
-.App {
+.App.dark {
     background-color: #222;
     min-height: 100vh;
     display: flex;
@@ -6,17 +6,47 @@
     color: whitesmoke;
 }
 
+.App.light {
+    background-color: whitesmoke;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    color: #222;
+}
+
 .content {
     flex: 1;
     overflow: scroll;
 }
 
-.App .rhap_container {
-    /* background-color: #222; */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-container p {
+    margin-right: 10px;
+}
+.App.dark .rhap_container {
+    background-color: rgb(11, 11, 11);
+}
+
+.App.light .rhap_container {
+    background-color: rgb(231, 230, 230);
 }
 
 .player_footer {
     width: 100%;
     bottom: 0;
     position: fixed;
+}
+
+.Footer.dark {
+    background-color: #222;
+}
+
+.Footer.light {
+    background-color: whitesmoke;
 }
