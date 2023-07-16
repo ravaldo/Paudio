@@ -27,3 +27,11 @@
     bottom: 0;
     position: fixed;
 }
+
+.Footer.dark {
+    background-color: #222;
+}
+
+.Footer.light {
+    background-color:whitesmoke;
+}

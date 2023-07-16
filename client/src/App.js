@@ -4,6 +4,7 @@ import AudioPlayer from 'react-h5-audio-player';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
+
 import './App.css';
 import 'react-h5-audio-player/lib/styles.css';
 
@@ -48,7 +49,7 @@ function App() {
             showSkipControls={playList.length > 1}
             layout={widescreen ? "horizontal" : "stacked"}
           />
-          <Footer />
+          <Footer lightDark={lightDark} />
         </div>
       </Router>
     </div>
