@@ -3307,7 +3307,6 @@ const topPodcastData =
           "rssOwnerPublicEmail": "applepodcast@howstuffworks.com",
           "authorName": "iHeartPodcasts"
         },
-        null,
         {
           "uuid": "3d4cc5d9-b305-443f-aaed-7abc16e8239e",
           "datePublished": 1535323036,

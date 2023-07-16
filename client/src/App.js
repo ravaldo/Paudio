@@ -7,11 +7,12 @@ import Footer from "./components/Footer";
 import './App.css';
 import 'react-h5-audio-player/lib/styles.css';
 
-import TaddyService from './services/TaddyService'
 import Search from "./components/Search";
 import Test from "./components/Test";
 import EpisodeList from "./components/EpisodeList";
 import Error from "./components/Error";
+import BrowseList from "./components/BrowseList";
+import SubscribedList from "./components/SubscribedList";
 
 function App() {
 
@@ -26,18 +27,20 @@ function App() {
   return (
     <div className="App">
       <Router >
+
         <Header />
+
         <div className="content">
           <Routes>
-            <Route path="/" element={<Test />} />
+            <Route path="/" element={<SubscribedList />} />
             <Route path="/episodes" element={<EpisodeList podcastName="True Crime" />} />
+            <Route path="/browse" element={<BrowseList />} />
             <Route path="/search" element={<Search />} />
             <Route path="/*" element={<Error />} />
-
           </Routes>
         </div>
+
         <div className="player_footer">
-          <div className="player">
           <AudioPlayer
             // autoPlay
             src={audio_url}
@@ -45,9 +48,9 @@ function App() {
             showSkipControls={playList.length > 1}
             layout={widescreen ? "horizontal" : "stacked"}
           />
-          </div>
           <Footer />
         </div>
+
       </Router>
     </div>
   );
