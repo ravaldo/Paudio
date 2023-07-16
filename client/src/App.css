@@ -28,9 +28,12 @@
 .header-container p {
     margin-right: 10px;
 }
+.App.dark .rhap_container {
+    background-color: rgb(11, 11, 11);
+}
 
-.App.rhap_container.dark {
-    background-color: #222;
+.App.light .rhap_container {
+    background-color: rgb(231, 230, 230);
 }
 
 .player_footer {
