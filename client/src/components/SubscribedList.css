@@ -5,5 +5,21 @@
 
 .grid-container img {
     width: 33vw;
+    border-radius: 5px;
+}
+
+box img{
+    border-radius: 5px;
+}
+
+@media (min-width:768px) {
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    .grid-container img {
+        width: 20vw;
+        border-radius: 5px;
+    }
 }
 

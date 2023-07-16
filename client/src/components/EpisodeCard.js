@@ -7,7 +7,7 @@ const EpisodeCard = ({ episode }) => {
     if (!episode)
         return null;
 
-    const episodeDate = new Date(episode.datePublished * 1000).toLocaleString();
+    const episodeDate = new Date(episode.datePublished * 1000).toLocaleDateString();
     
     const episodeDuration = () => {
         const seconds = episode.duration;
