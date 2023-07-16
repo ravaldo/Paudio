@@ -9,13 +9,13 @@ const Header = ({ toggleLightDark, lightDark }) => {
 
     const getCurrentPage = () => {
         if (currentPage.pathname === '/episodes') {
-            return <h3>Browse Podcast Episodes</h3>;
+            return <h2>Browse Podcast Episodes</h2>;
         }
         else if (currentPage.pathname === '/browse') {
-            return <h3>Browse Podcasts</h3>
+            return <h2>Browse Podcasts</h2>
         }
         else if (currentPage.pathname === '/search') {
-            return <h3>Search for Podcasts</h3>
+            return <h2>Search for Podcasts</h2>
         }
         else return <h2>Welcome Home</h2>
     };

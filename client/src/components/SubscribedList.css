@@ -5,9 +5,9 @@
 
 .grid-container img {
     width: 33vw;
+    border-radius: 5px;
 }
 
-.box {
-
-
+.box img{
+    border-radius: 5px;
 }
