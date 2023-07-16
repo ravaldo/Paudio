@@ -1,6 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
-import styled from "styled-components";
+// import styled from "styled-components";
 import topPodcastData from '../services/topPodcastData';
 import './SubscribedList.css'
 
@@ -16,7 +16,7 @@ const SubscribedList = () => {
     const podcastsList = podcasts.map(p => {
         return (
             <div className='box' >
-                 <Link to='/episodes'><img src={p.imageUrl}/> </Link>
+                <Link to='/episodes'><img style="border-radius: 5px" src={p.imageUrl}/> </Link>
             </div>
         )
 
