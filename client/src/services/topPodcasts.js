@@ -1,4 +1,16 @@
 
+// const fetchInOrder = async function (topPodcasts) {
+//     const responses = [];
+
+//     for (let i = 0; i < 30; i++) {
+//         console.log(topPodcasts[i].name)
+//         const response = await TaddyService.searchForEpisodes(topPodcasts[i].name)
+//         responses.push(response);
+//     }
+//     return responses
+// }
+
+
 const topPodcasts = [
     { name: "The Joe Rogan Experience", authorName: "Joe Rogan" },
     { name: "Call Her Daddy", authorName: "Alex Cooper" },

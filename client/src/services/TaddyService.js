@@ -11,7 +11,7 @@ const TaddyService = {
   searchForSeries(term) {
     const query = `
       query SearchQuery($term: String!) {
-        searchForTerm(term: $term, filterForTypes: PODCASTSERIES, page:1, limitPerPage:25) {
+        searchForTerm(term: $term, filterForTypes: PODCASTSERIES, page: 1, limitPerPage: 25) {
           searchId
           podcastSeries {
             uuid
@@ -37,7 +37,7 @@ const TaddyService = {
               publisherName
               country
             }
-                   }
+          }
         }
       }
     `;
@@ -71,7 +71,7 @@ const TaddyService = {
   searchForEpisodes(term) {
     const query = `
       query SearchQuery($term: String!) {
-          getPodcastSeries(name: $term){
+        getPodcastSeries(name: $term) {
           uuid
           datePublished
           name
@@ -80,7 +80,7 @@ const TaddyService = {
           itunesId
           hash
           childrenHash
-          episodes(sortOrder:LATEST, page:1, limitPerPage:25){
+          episodes(sortOrder: LATEST, page: 1, limitPerPage: 25) {
             uuid
             name
             datePublished
@@ -90,7 +90,9 @@ const TaddyService = {
             fileLength
             fileType
             duration
-            podcastSeries
+            podcastSeries {
+              uuid
+            }
           }
           totalEpisodesCount
           genres
