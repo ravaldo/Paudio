@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import TaddyService from '../services/TaddyService'
+import "./Search.css";
 
 const Search = () => {
 
@@ -23,8 +24,8 @@ const Search = () => {
 
     return (
         <div>
-            <input type="text" onChange={handleChange} onKeyPress={handleKeyPress} />
-            <button onClick={handleClick}>SEARCH</button>
+            <input type="text" placeholder="What would you like to listen to?" onChange={handleChange} onKeyPress={handleKeyPress} />
+            {/* <button onClick={handleClick}>SEARCH</button> */}
             {podcastCards}
         </div>
     )
