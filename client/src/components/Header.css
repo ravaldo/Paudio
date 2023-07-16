@@ -21,3 +21,26 @@
 .header-container h1{
     font-size: xx-large;
 }
+
+.lightdark {
+    font-size: 1rem;
+}
+
+
+
+@media (max-width:768px) {
+    header.dark .lightbulb-icon {
+        font-size: 10rem;
+    }
+    .lightdark{
+        font-size: 0.8rem;
+    }
+
+    .header-container h1{
+        font-size: large;
+    }
+
+    h2 {
+        font-size: medium;
+    }
+}
