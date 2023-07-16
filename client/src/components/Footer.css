@@ -1,0 +1,17 @@
+.Footer {
+    background-color: #222;
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+} 
+
+.icon a{
+    color: whitesmoke;
+    margin: 1 50px;
+    display: flex;
+}

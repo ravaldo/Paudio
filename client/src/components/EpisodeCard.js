@@ -23,14 +23,18 @@ const EpisodeCard = ({ episode }) => {
 
 
     return (
-        <div>
-            <h4 className="episodeName" >{episode.name}</h4>
+        <div className="EpisodeCard">
+          <div className="episodeImageWrapper">
             <img className="episodeImage" src={episode.imageUrl} alt={`this is an image of ${episode.name}`} />
-            <h6 className="episodeDuration">duration: {episodeDuration()}</h6>
-            <p>{episodeDate}</p>
+          </div>
+          <div className="episodeInfo">
+            <h4 className="episodeName">{episode.name}</h4>
+            <p className="episodeDuration">Duration: {episodeDuration()}</p>
+            <p className="episodeDate">{episodeDate}</p>
+            
+          </div>
         </div>
-    )
-
-}
+      );
+    };
 
 export default EpisodeCard;
