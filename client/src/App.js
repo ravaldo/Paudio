@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AudioPlayer from 'react-h5-audio-player';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLight } from '@fortawesome/free-solid-svg-icons';
 
 
 import './App.css';

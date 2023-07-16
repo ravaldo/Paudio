@@ -6,7 +6,7 @@
     color: whitesmoke;
 }
 
-.App.light{
+.App.light {
     background-color: whitesmoke;
     min-height: 100vh;
     display: flex;
@@ -18,8 +18,19 @@
     overflow: scroll;
 }
 
-.App .rhap_container {
-    /* background-color: #222; */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-container p {
+    margin-right: 10px;
+}
+
+.App.rhap_container.dark {
+    background-color: #222;
 }
 
 .player_footer {
@@ -33,5 +44,5 @@
 }
 
 .Footer.light {
-    background-color:whitesmoke;
+    background-color: whitesmoke;
 }

@@ -1,7 +1,10 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
+import './Header.css'
 
-const Header = ({ toggleLightDark }) => {
+const Header = ({ toggleLightDark, lightDark }) => {
     const currentPage = useLocation();
 
     const getCurrentPage = () => {
@@ -31,10 +34,21 @@ const Header = ({ toggleLightDark }) => {
     }
 
     return (
-        <div className='Header'>
-            <h1>{greet}</h1>
-            {getCurrentPage()}
-            <button onClick={toggleLightDark}>Toggle Light/Dark Mode</button>
+        <div className={`Header ${lightDark}`}>
+            <div className='header-container'>
+                <div>
+                    <h1>{greet}</h1>
+                    {getCurrentPage()}
+                </div>
+                <div>
+                    <p>
+                        <FontAwesomeIcon
+                            icon={faLightbulb} size='2x' onClick={toggleLightDark}>
+                        </FontAwesomeIcon>
+                    </p>
+                    <p className='lightdark'>Light/Dark </p>
+                </div>
+            </div>
         </div>
     );
 };
