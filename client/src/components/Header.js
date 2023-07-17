@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
+import Toggle from './toggle'
 import './Header.css'
 
 const Header = ({ toggleLightDark, lightDark }) => {
@@ -36,20 +37,21 @@ const Header = ({ toggleLightDark, lightDark }) => {
         greet = 'Good evening';
     }
 
+    
+
     return (
         <div className={`Header ${lightDark}`}>
             <div className='header-container'>
                 <div>
+                    
                     <h1>{greet}</h1>
                     {getCurrentPage()}
                 </div>
                 <div>
                     <p>
-                        <FontAwesomeIcon
-                            icon={faLightbulb} size='2x' onClick={toggleLightDark}>
-                        </FontAwesomeIcon>
+                    <Toggle onClick = {toggleLightDark}/>
                     </p>
-                    <p className='lightdark'>Light/Dark </p>
+                    <p className='lightdark'>Dark/Light </p>
                 </div>
             </div>
         </div>
