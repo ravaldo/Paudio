@@ -6,7 +6,7 @@
     border-radius: 5px;
     gap: 15px;
     margin-bottom: 5px;
-    color: whitesmoke
+    color: whitesmoke;
 }
 
 .BrowseCard h4 {
@@ -16,11 +16,13 @@
 .BrowseCard img {
     width: 150px;
     border-radius: 5px;
+    /* height:100% */
 }
 
 .podcastDetails {
     margin-top: 10px;
-    flex: none
+    flex: none;
+    /* padding-top:10px; */
 }
 
 .BrowseCard.dark {}

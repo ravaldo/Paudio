@@ -6,32 +6,29 @@
     width: 40vw;
 }
 
-.menu > a {
-    text-decoration: none;
+.menu a {
     display:flex;
     flex-direction: column;
+    text-decoration: none;
 }
 
-
-.menu .dark > a:link {
-    color:whitesmoke;
-} 
-
-.menu .light > a:link {
-    color:#222;
-} 
-
-.menu.dark > a:visited {
-    color:whitesmoke;
-} 
-
-.menu.light > a:visited {
-    color:#222;
-} 
-
-.menu > a:hover {
-    color: #f36427
+.menu a:visited {
+    text-decoration:none;
+    color:#f36427
 }
+
+/* .menu.dark a {
+    color: whitesmoke;
+}
+
+.menu.light a {
+    color: #222;
+} */
+
+.menu a:hover {
+    padding-top: 5px;
+}
+
 
 @media (max-width:768px){
     .menu {

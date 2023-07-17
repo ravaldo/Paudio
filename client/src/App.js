@@ -16,6 +16,7 @@ import EpisodeList from "./components/EpisodeList";
 import Error from "./components/Error";
 import Test from "./components/Test";
 import Playlist from "./components/Playlist";
+import TaddyService from "./services/TaddyService";
 
 function App() {
 
@@ -42,10 +43,14 @@ function App() {
   const playTrack = (episode) => {
     addToPlaylist(episode);
     setSongIndex(playlist.length);
+
   }
   const addToPlaylist = (episode) => setPlayList([...playlist, episode])
   const handleClickNext = () => { setSongIndex( _ => songIndex < playlist.length - 1 ? songIndex+1 : songIndex )};
   const handleClickPrev = () => { setSongIndex( _ => songIndex > 0 ? songIndex-1 : songIndex )};
+  
+  // const nowPlaying = episode.name
+    
   
 
   return (
@@ -72,6 +77,7 @@ function App() {
         <div className="player_footer">
           <AudioPlayer className="player"
             src={playlist.length>0? playlist[songIndex].audioUrl: null}
+
             onPlay={e => console.log("onPlay")}
             onClickPrevious={handleClickPrev}
             onClickNext={handleClickNext}
