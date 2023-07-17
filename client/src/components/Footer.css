@@ -5,12 +5,20 @@
     padding: 13px 0;
 }
 
-
 .Footer.dark a {
     color: whitesmoke;
 }
+
 .Footer.light a {
     color: #222;
+}
+
+.Footer a:hover {
+    color:#f36427;   
+}
+
+.Footer.dark a:active {
+    color:#f36427;
 }
 
 @media (min-width:768px) {

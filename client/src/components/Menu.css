@@ -1,8 +1,14 @@
 .menu {
     display:flex;
     justify-content: space-around;
-    padding: 13px 0;
-    background-color: #222;
+    gap: 5px;
+    margin: auto;
+    width: 40vw;
+}
+
+.menu a {
+    padding: 10px;
+    text-decoration: none;
 }
 
 .menu.dark a {
@@ -13,8 +19,16 @@
     color: #222;
 }
 
+.menu > a:visited{
+    text-decoration: none !important;
+    color:whitesmoke;
+}
+
+
+
 @media (max-width:768px){
     .menu {
         display: none;
     }
 }
+
