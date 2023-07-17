@@ -1,54 +1,82 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AudioPlayer from 'react-h5-audio-player';
-import Header from "./components/Header";
-import Footer from "./components/Footer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLight } from '@fortawesome/free-solid-svg-icons';
-
 
 import './App.css';
 import 'react-h5-audio-player/lib/styles.css';
 
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 import Search from "./components/Search";
-import Test from "./components/Test";
+import SubscribedList from "./components/SubscribedList";
+import BrowseList from "./components/BrowseList";
 import EpisodeList from "./components/EpisodeList";
 import Error from "./components/Error";
-import BrowseList from "./components/BrowseList";
-import SubscribedList from "./components/SubscribedList";
+import Test from "./components/Test";
+import Playlist from "./components/Playlist";
 
 function App() {
+
   const [lightDark, setLightDark] = useState("dark");
-  const [playList, setPlayList] = useState([]);
+  const [playlist, setPlayList] = useState([]);
+  const [songIndex, setSongIndex] = useState(0);
   const [widescreen, setWidescreen] = useState(false);
 
-  window.addEventListener('resize', () => setWidescreen(window.innerWidth > 768));
+  useEffect(() => {
+    setContentHeight();
+  })
 
-  const toggleLightDark = () => {
-    setLightDark(prevMode => (prevMode === "dark" ? "light" : "dark"));
+  const setContentHeight = () => {
+    const footerHeight = document.querySelector(".player_footer").offsetHeight;
+    const headerHeight = document.querySelector(".Header").offsetHeight;
+    const contentHeight = window.innerHeight - headerHeight - footerHeight;
+    document.querySelector(".content").style.height = `${contentHeight}px`;
   };
 
-  const audio_url = "https://pfx.vpixl.com/6qj4J/dts.podtrac.com/redirect.mp3/chtbl.com/track/8DB4DB/pdst.fm/e/nyt.simplecastaudio.com/bbbcc290-ed3b-44a2-8e5d-5513e38cfe20/episodes/c81e5dcb-fb3b-4a3d-a472-f66852a687e4/audio/128/default.mp3?awCollectionId=bbbcc290-ed3b-44a2-8e5d-5513e38cfe20&awEpisodeId=c81e5dcb-fb3b-4a3d-a472-f66852a687e4"
+  window.addEventListener('resize', setContentHeight);
+  window.addEventListener('resize', () => setWidescreen(window.innerWidth > 768));
+
+  const toggleLightDark = () => setLightDark(lightDark == "dark" ? "light" : "dark");
+  const playTrack = (episode) => {
+    addToPlaylist(episode);
+    setSongIndex(playlist.length);
+  }
+  const addToPlaylist = (episode) => setPlayList([...playlist, episode])
+  const handleClickNext = () => { setSongIndex( _ => songIndex < playlist.length - 1 ? songIndex+1 : songIndex )};
+  const handleClickPrev = () => { setSongIndex( _ => songIndex > 0 ? songIndex-1 : songIndex )};
+  
 
   return (
     <div className={`App ${lightDark}`}>
       <Router>
+        
         <Header toggleLightDark={toggleLightDark} />
-        <div className="content">
+        
+        <div className="content" >
           <Routes>
             <Route path="/" element={<SubscribedList />} />
-            <Route path="/episodes" element={<EpisodeList podcastName="True Crime" />} />
+            <Route path="/episodes/:uuid" element={<EpisodeList
+              playTrack={playTrack}
+              addToPlaylist={addToPlaylist}
+              lightDark={lightDark}
+            />} />
             <Route path="/browse" element={<BrowseList />} />
             <Route path="/search" element={<Search />} />
+            <Route path="/playlist" element={<Playlist playlist={playlist} />} />
             <Route path="/*" element={<Error />} />
           </Routes>
         </div>
+       
         <div className="player_footer">
           <AudioPlayer
-            // autoPlay
-            src={audio_url}
+            src={playlist.length>0? playlist[songIndex].audioUrl: null}
             onPlay={e => console.log("onPlay")}
-            showSkipControls={playList.length > 1}
+            onClickPrevious={handleClickPrev}
+            onClickNext={handleClickNext}
+            onEnded={handleClickNext}
+            showSkipControls={playlist.length > 1}
             layout={widescreen ? "horizontal" : "stacked"}
           />
           <Footer lightDark={lightDark} />

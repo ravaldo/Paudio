@@ -1,3 +1,7 @@
+.light, .dark {
+    transition: background-color 3s, color 3s !important;
+}
+
 .App.dark {
     background-color: #222;
     min-height: 100vh;
@@ -15,7 +19,6 @@
 }
 
 .content {
-    flex: 1;
     overflow: scroll;
 }
 
@@ -31,10 +34,12 @@
 }
 .App.dark .rhap_container {
     background-color: rgb(11, 11, 11);
+    transition: background-color 3s, color 3s;
 }
 
 .App.light .rhap_container {
     background-color: rgb(231, 230, 230);
+    transition: background-color 3s, color 3s;
 }
 
 .player_footer {

@@ -17,6 +17,9 @@ const Header = ({ toggleLightDark, lightDark }) => {
         else if (currentPage.pathname === '/search') {
             return <h2>Search for Podcasts</h2>
         }
+        else if (currentPage.pathname === '/playlist') {
+            return <h2>Your Playlist</h2>
+        }
         else return <h2>Welcome Home</h2>
     };
 

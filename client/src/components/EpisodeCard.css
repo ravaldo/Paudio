@@ -1,63 +1,51 @@
 .EpisodeCard {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin: 0 5%;
   background-color: rgb(51, 51, 51);
   display: flex;
   align-items: center;
   border-radius: 5px;
+  gap: 15px;
 }
-.episodeImageWrapper {
-  margin-right: 10px;
-  flex-shrink: 0;
+
+.EpisodeCard h4 {
+  margin: 0;
 }
+
+.EpisodeCard > div {
+  flex: 1
+}
+
+.EpisodeCard .cardMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* max-width: 30%; */
+}
+
 .EpisodeCard img {
   width: 150px;
   border-radius: 5px;
 }
-.episodeInfo {
-  display: flex;
-  flex-direction: column;
-}
-.episodeName {
-  margin-top: 2px;
-  margin-bottom: 5px;
-  font-size: large;
-  padding-bottom: 5px;
-}
-.episodeDuration {
-  margin-top: 0;
-  margin-bottom: 0;
-  font-size: small;
-}
-.episodeDate {
-  font-size: x-small;
+
+.EpisodeCard #icon {
+  margin-right: 0.3em;
+  font-size: 3em;
 }
 
-@media (max-width:768px) {
-  .EpisodeCard {
-    margin-left: 5%;
-    margin-right: 5%;
-    background-color: rgb(51, 51, 51);
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-  }
-  .episodeName {
-    margin-top: 2.5px;
-    margin-bottom: 2.5px;
-    font-size: small;
-    padding-bottom: 2.5px;
-  }
-  .EpisodeCard img {
-    width: 75px;
-    border-radius: 2.5px;
-  }
-  .episodeDuration {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: x-small;
-  }
-  .episodeDate {
-    font-size: xx-small;
+.EpisodeCard #icon:hover {
+  cursor: pointer;
+}
+
+.EpisodeCard.dark {}
+
+.EpisodeCard.light {
+  background-color: #555;
+  color: whitesmoke;
+}
+
+@media (max-width: 600px) {
+  .EpisodeCard #icon {
+    margin-right: 0.3em;
+    font-size: 2em;
   }
 }

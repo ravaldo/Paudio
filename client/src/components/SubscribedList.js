@@ -16,7 +16,7 @@ const SubscribedList = () => {
     const podcastsList = podcasts.map(p => {
         return (
             <div className='box' >
-                <Link to='/episodes'><img src={p.imageUrl} /> </Link>
+                <Link to={`/episodes/${p.uuid}`}><img src={p.imageUrl} /> </Link>
             </div>
         )
 
