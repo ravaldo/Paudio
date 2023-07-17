@@ -1,0 +1,20 @@
+.menu {
+    display:flex;
+    justify-content: space-around;
+    padding: 13px 0;
+    background-color: #222;
+}
+
+.menu.dark a {
+    color: whitesmoke;
+}
+
+.menu.light a {
+    color: #222;
+}
+
+@media (max-width:768px){
+    .menu {
+        display: none;
+    }
+}

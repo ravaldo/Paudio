@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 import './Header.css'
+import Menu from './Menu';
 
 const Header = ({ toggleLightDark, lightDark }) => {
     const currentPage = useLocation();
@@ -50,6 +51,9 @@ const Header = ({ toggleLightDark, lightDark }) => {
                         </FontAwesomeIcon>
                     </p>
                     <p className='lightdark'>Light/Dark </p>
+                </div>
+                <div>
+                    <Menu />
                 </div>
             </div>
         </div>
