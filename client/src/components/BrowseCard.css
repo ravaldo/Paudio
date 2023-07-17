@@ -29,3 +29,9 @@
     background-color: #555;
     color: whitesmoke;
 }
+
+.BrowseCard:hover{
+    border: solid orange;
+    background-color: rgb(76, 75, 75);
+    border-radius:5px
+}
