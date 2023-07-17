@@ -20,9 +20,9 @@ const BrowseList = () => {
     if (podcasts.length === 0)
         return;
     return (
-        <>
+        <div className="browseList">
             {podcastsList}
-        </>
+        </div>
     )
 };
 
