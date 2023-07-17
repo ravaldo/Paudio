@@ -50,3 +50,12 @@
     justify-content: space-around;
     padding: 2px;
 }
+
+.ldswitch{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 5px;
+    size: 75%
+    
+}

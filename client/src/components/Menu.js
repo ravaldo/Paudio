@@ -7,10 +7,10 @@ import { Link } from 'react-router-dom';
 const Menu = ({ lightDark }) => {
   return (
     <div className={`menu ${lightDark}`}>
-      <Link to='/' ><FontAwesomeIcon icon={faHouse} size='1x'  />Your&nbsp;Library</Link>
-      <Link to='/browse'><FontAwesomeIcon icon={faTableCellsLarge} size='1x' />Browse&nbsp;Podcasts</Link>
-      <Link to='/search'><FontAwesomeIcon icon={faMagnifyingGlass} size='1x' />Search</Link>
-      <Link to='/playlist'><FontAwesomeIcon icon={faIndent} size='1x' />Playlist</Link>
+      <Link to='/' ><FontAwesomeIcon icon={faHouse} size='2x'  />Your&nbsp;Library</Link>
+      <Link to='/browse'><FontAwesomeIcon icon={faTableCellsLarge} size='2x' />Browse&nbsp;Podcasts</Link>
+      <Link to='/search'><FontAwesomeIcon icon={faMagnifyingGlass} size='2x' />Search</Link>
+      <Link to='/playlist'><FontAwesomeIcon icon={faIndent} size='2x' />Playlist</Link>
     </div>
   );
 }

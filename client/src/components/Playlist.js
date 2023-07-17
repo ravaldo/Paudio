@@ -8,7 +8,8 @@ const Playlist = (playlist, songIndex) => {
       }
 
     const nodes = playlist.playlist.map(ep => {
-        return <p>{ep.name}</p>
+        return 
+        <p>{ep.name}</p>
     });
 
     return (

@@ -70,7 +70,7 @@ function App() {
         </div>
        
         <div className="player_footer">
-          <AudioPlayer
+          <AudioPlayer className="player"
             src={playlist.length>0? playlist[songIndex].audioUrl: null}
             onPlay={e => console.log("onPlay")}
             onClickPrevious={handleClickPrev}

@@ -24,6 +24,7 @@ const EpisodeCard = ({ episode, playTrack, addToPlaylist, lightDark, defaultImgU
     return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
   }
 
+
   return (
     <>
       <div className={`EpisodeCard ${lightDark}`}>
@@ -36,7 +37,7 @@ const EpisodeCard = ({ episode, playTrack, addToPlaylist, lightDark, defaultImgU
               <p>{episodeDate}</p>
             </div>
             <div>
-              <span id="icon"><FontAwesomeIcon icon={faSquarePlus} onClick={() => addToPlaylist(episode)} /></span>
+              <span><FontAwesomeIcon icon={faSquarePlus} onClick={() => addToPlaylist(episode)} /></span>
               <span id="icon"><FontAwesomeIcon icon={faCirclePlay} onClick={() => playTrack(episode)} /></span>
             </div>
           </div>

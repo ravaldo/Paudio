@@ -50,10 +50,10 @@ const Header = ({ toggleLightDark, lightDark }) => {
                 <div className='headermenu'>
                     <Menu />
                 </div>
-                <div>
-                    <p>
+                <div className='ldswitch'>
+                    
                     <Toggle onClick = {toggleLightDark}/>
-                    </p>
+                    
                     <p className='lightdark'>Dark/Light </p>
                 </div>
                 

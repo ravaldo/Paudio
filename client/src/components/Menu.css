@@ -12,21 +12,22 @@
     flex-direction: column;
 }
 
-.menu.dark > a {
-    color: whitesmoke
-}
 
-.menu.light > a {
-    color: #222;
-}
+.menu .dark > a:link {
+    color:whitesmoke;
+} 
+
+.menu .light > a:link {
+    color:#222;
+} 
 
 .menu.dark > a:visited {
     color:whitesmoke;
 } 
 
-.menu > a:visited {
+.menu.light > a:visited {
     color:#222;
-}
+} 
 
 .menu > a:hover {
     color: #f36427

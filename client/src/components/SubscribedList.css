@@ -16,15 +16,20 @@
     padding: 2px;
 }
 
-.box > img:after{
+/* .box > img:after{
     background-color: #f36427;
     opacity:100%;
     transition: all 0.5s;
     -webkit-transition: all 0.5s;
-}
+} */
     
-.box > img:hover:after{
-    opacity: 50%;
+.box:hover{
+    border-top: solid #f36427;
+    border-left: solid #f36427;
+    border-radius: 5px;
+    border-width: 5px;
+    padding: 0px;
+
 }
 
 
