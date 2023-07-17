@@ -5,7 +5,7 @@ import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 import Toggle from './toggle'
 import './Header.css'
 import Menu from './Menu';
-import Toggle from './toggle';
+
 
 const Header = ({ toggleLightDark, lightDark }) => {
     const currentPage = useLocation();
