@@ -12,3 +12,9 @@
 .Footer.light a {
     color: #222;
 }
+
+@media (min-width:768px) {
+    .Footer {
+        display: none;
+    }
+}
