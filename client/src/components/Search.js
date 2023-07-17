@@ -50,7 +50,7 @@ const Search = () => {
         />
         
       </div>
-      <div className="adjust">{results.length > 0 ? <BrowseList/>: null}</div>
+      <div className="adjust">{results.length > 0 ? <BrowseList podcasts={results}/>: null}</div>
       </>
     );
 }
