@@ -43,6 +43,10 @@
   color: whitesmoke;
 }
 
+.EpisodeCard.light + hr {
+  border-color: rgb(223, 228, 233);
+}
+
 @media (max-width: 600px) {
   .EpisodeCard #icon {
     margin-right: 0.3em;
