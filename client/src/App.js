@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import AudioPlayer from 'react-h5-audio-player';
+// import AudioPlayer from 'react-h5-audio-player';
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import './App.css';
-import 'react-h5-audio-player/lib/styles.css';
+// import 'react-h5-audio-player/lib/styles.css';
 
 import Search from "./components/Search";
 import Test from "./components/Test";
@@ -19,7 +19,7 @@ function App() {
 
   return (
     <div className="App">
-      <Router >
+      <Router>
         <Header />
         <div className="content">
           <Routes>
@@ -31,7 +31,9 @@ function App() {
             <Route path="/*" element={<Error />} />
           </Routes>
         </div>
+        <div className="player_footer">
           <Footer />
+        </div>  
       </Router>
     </div>
   );
