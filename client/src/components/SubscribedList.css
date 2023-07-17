@@ -1,7 +1,6 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    /* row-gap: 0px; */
     padding: 4px
 
 
@@ -10,22 +9,25 @@
 .grid-container img {
     max-width: 100%;
     border-radius: 5px;
-    /* row-gap:-5px; */
-
-
 }
 
 .box{
     margin-bottom: -4px;
     padding: 2px;
+}
+
+.box > img:after{
+    background-color: #f36427;
+    opacity:100%;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+    
+.box > img:hover:after{
+    opacity: 50%;
+}
 
 
-    
-}
-box img{
-    
-    
-}
 
 @media (min-width:768px) {
     .grid-container {

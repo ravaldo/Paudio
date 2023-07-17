@@ -6,29 +6,32 @@
     width: 40vw;
 }
 
-.menu a {
-    padding: 10px;
+.menu > a {
     text-decoration: none;
 }
 
-.menu.dark a {
-    color: whitesmoke;
+.menu.dark > a {
+    color: whitesmoke
 }
 
-.menu.light a {
+.menu.light > a {
     color: #222;
 }
 
-.menu > a:visited{
-    text-decoration: none !important;
+.menu.dark > a:visited {
     color:whitesmoke;
+} 
+
+.menu > a:visited {
+    color:#222;
 }
 
-
+.menu > a:hover {
+    color: #f36427
+}
 
 @media (max-width:768px){
     .menu {
         display: none;
     }
 }
-

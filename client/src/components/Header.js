@@ -42,7 +42,7 @@ const Header = ({ toggleLightDark, lightDark }) => {
         <div className={`Header ${lightDark}`}>
             <div className='header-container'>
                 <div>
-                    <Toggle/>
+                    {/* <Toggle/> */}
                     <h1>{greet}</h1>
                     {getCurrentPage()}
                 </div>
