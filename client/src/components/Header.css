@@ -44,3 +44,9 @@
         font-size: medium;
     }
 }
+
+.headermenu {
+    display: flex;
+    justify-content: space-around;
+    padding: 2px;
+}

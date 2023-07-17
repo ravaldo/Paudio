@@ -4,6 +4,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 import Toggle from './toggle'
 import './Header.css'
+import Menu from './Menu';
+import Toggle from './toggle';
 
 const Header = ({ toggleLightDark, lightDark }) => {
     const currentPage = useLocation();
@@ -43,9 +45,11 @@ const Header = ({ toggleLightDark, lightDark }) => {
         <div className={`Header ${lightDark}`}>
             <div className='header-container'>
                 <div>
-                    
                     <h1>{greet}</h1>
                     {getCurrentPage()}
+                </div>
+                <div className='headermenu'>
+                    <Menu />
                 </div>
                 <div>
                     <p>
@@ -53,6 +57,7 @@ const Header = ({ toggleLightDark, lightDark }) => {
                     </p>
                     <p className='lightdark'>Dark/Light </p>
                 </div>
+                
             </div>
         </div>
     );

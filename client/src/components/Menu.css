@@ -1,0 +1,39 @@
+.menu {
+    display:flex;
+    justify-content: space-around;
+    gap: 5px;
+    margin: auto;
+    width: 40vw;
+}
+
+.menu > a {
+    text-decoration: none;
+    display:flex;
+    flex-direction: column;
+}
+
+.menu.dark > a {
+    color: whitesmoke
+}
+
+.menu.light > a {
+    color: #222;
+}
+
+.menu.dark > a:visited {
+    color:whitesmoke;
+} 
+
+.menu > a:visited {
+    color:#222;
+}
+
+.menu > a:hover {
+    color: #f36427
+}
+
+@media (max-width:768px){
+    .menu {
+        display: none;
+    }
+}
