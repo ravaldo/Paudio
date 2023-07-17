@@ -30,8 +30,14 @@
     color: whitesmoke;
 }
 
-.BrowseCard:hover{
+/* .BrowseCard:hover{
     border: solid orange;
     background-color: rgb(76, 75, 75);
     border-radius:5px
-}
+} */
+
+.BrowseCard:hover {
+    -webkit-box-shadow: 0px 0px 0px 5px #f36427;
+    -moz-box-shadow: 0px 0px 0px 5px #f36427;
+    box-shadow: 0px 0px 0px 5px #f36427;
+  }
