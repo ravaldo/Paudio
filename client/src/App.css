@@ -56,11 +56,3 @@
 .Footer.light {
     background-color: whitesmoke;
 }
-
-.player:active {
-    height:50vh;
-}
-
-.player > .rhap_progress-section:active{
-    margin-bottom: 10px;
-}

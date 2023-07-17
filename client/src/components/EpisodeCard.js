@@ -37,7 +37,7 @@ const EpisodeCard = ({ episode, playTrack, addToPlaylist, lightDark, defaultImgU
               <p>{episodeDate}</p>
             </div>
             <div>
-              <span><FontAwesomeIcon icon={faSquarePlus} onClick={() => addToPlaylist(episode)} /></span>
+              <span id="icon"><FontAwesomeIcon icon={faSquarePlus} onClick={() => addToPlaylist(episode)} /></span>
               <span id="icon"><FontAwesomeIcon icon={faCirclePlay} onClick={() => playTrack(episode)} /></span>
             </div>
           </div>
