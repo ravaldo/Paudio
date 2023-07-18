@@ -12,21 +12,27 @@
     text-decoration: none;
 }
 
-.menu a:visited {
+/* .menu a:visited {
     text-decoration:none;
     color:#f36427
-}
+} */
 
-/* .menu.dark a {
+/* .menu > a {
     color: whitesmoke;
-}
+    font-size: x-small;
+} */
 
 .menu.light a {
     color: #222;
-} */
+} 
+
+.menu.dark a {
+    color:whitesmoke
+}
 
 .menu a:hover {
-    padding-top: 5px;
+
+    color: #f36427
 }
 
 

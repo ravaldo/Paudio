@@ -56,7 +56,7 @@ function App() {
     <div className={`App ${lightDark}`}>
       <Router>
         
-        <Header toggleLightDark={toggleLightDark} />
+        <Header toggleLightDark={toggleLightDark} lightDark={lightDark}/>
         
         <div className="content" >
           <Routes>
