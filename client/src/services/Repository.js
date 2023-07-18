@@ -1,5 +1,5 @@
-// import Database from 'better-sqlite3';
-const Database = require('better-sqlite3');
+import Database from 'better-sqlite3';
+// const sqlite3 = require('sqlite3').verbose();
 
 function Repo() {
 
@@ -74,7 +74,8 @@ function Repo() {
 const repo = new Repo();
 repo.createTables()
 
-module.exports = repo
+// module.exports = repo
+export default repo;
 
 
 
