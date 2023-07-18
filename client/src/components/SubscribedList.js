@@ -4,14 +4,16 @@ import styled from 'styled-components'
 import topPodcastData from '../services/topPodcastData';
 import './SubscribedList.css'
 
-const SubscribedList = () => {
+const SubscribedList = ({subscriptions}) => {
 
     const [podcasts, setPodcasts] = useState([]);
 
     useEffect(() => {
-        setPodcasts(topPodcastData)
-    }, []);
+        setPodcasts(subscriptions)
+    }, [podcasts]);
 
+    if (podcasts.length == 0)
+    return null;
 
     const podcastsList = podcasts.map(p => {
         return (
@@ -23,8 +25,6 @@ const SubscribedList = () => {
     });
 
 
-    if (podcasts.length === 0)
-        return;
     return (
         <div className='grid-container'>
             {podcastsList}

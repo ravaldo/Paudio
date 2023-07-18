@@ -4,7 +4,7 @@ import BrowseCard from './BrowseCard';
 import topPodcastData from '../services/topPodcastData';
 
 
-const BrowseList = () => {
+const BrowseList = ({addToSubscriptions}) => {
 
     const [podcasts, setPodcasts] = useState([]);
 
@@ -14,7 +14,7 @@ const BrowseList = () => {
     }, []);
 
     
-    const podcastsList = podcasts.map(p => <BrowseCard podcastSeries={p} key={p.uuid} /> );
+    const podcastsList = podcasts.map(p => <BrowseCard podcastSeries={p} key={p.uuid} addToSubscriptions={addToSubscriptions}/> );
 
 
     if (podcasts.length === 0)

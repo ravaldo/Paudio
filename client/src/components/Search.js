@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import TaddyService from '../services/TaddyService'
 import "./Search.css";
 import BrowseList from './BrowseList';
-import repo from '../services/Repository';
+// import repo from '../services/Repository';
 
 
 const Search = ({ lightDark }) => {
@@ -27,9 +27,9 @@ const Search = ({ lightDark }) => {
     const handleClick = () => {
         if (searchTerm.length > 2) {
             TaddyService.searchForSeries(searchTerm).then(data => setResults(data))
-            results.forEach(element => {
-              repo.insertSeriesData(element);
-            });
+            // results.forEach(element => {
+              // repo.insertSeriesData(element);
+            // });
         }
     };
 

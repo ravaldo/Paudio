@@ -23,20 +23,22 @@
     -webkit-transition: all 0.5s;
 } */
     
-/* .box:hover{
-    border-top: solid #f36427;
-    border-left: solid #f36427;
+.box:hover{
+    outline: 4px solid #f36427;
+    outline-offset: -3px;
     border-radius: 5px;
-    border-width: 5px;
-    padding: 0px;
-} */
+    margin-bottom: -4px;
+    padding-bottom: -8px;
+}
 
-.box:hover {
+/* .box:hover {
     -webkit-box-shadow: 0px 0px 0px 2px #f36427;
     -moz-box-shadow: 0px 0px 0px 2px #f36427; 
     /* box-shadow: 0px 0px 0x 2px #f36427; */
-    padding-bottom: -2px;
-  } 
+    /* padding-bottom: -4px;
+    margin-bottom: -4px;
+    position: relative;
+  }  */ */
 
 .grid-container img:hover {
     border-radius: 0px;

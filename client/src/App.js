@@ -25,6 +25,7 @@ function App() {
   const [songIndex, setSongIndex] = useState(0);
   const [widescreen, setWidescreen] = useState(false);
   const [episode, setEpisode]= useState('')
+  const [subscriptions, setSubscriptions] = useState([]);
 
 
   useEffect(() => {
@@ -49,6 +50,13 @@ function App() {
   }
   const addToPlaylist = (episode) => setPlayList([...playlist, episode])
 
+  const addToSubscriptions = (podcast) => {
+    
+    setSubscriptions([...subscriptions, podcast])
+    console.log(podcast)
+    
+  };
+
   const deleteFromPlaylist = (episode) => setPlayList(playlist.filter(e => e.uuid !== episode.uuid))
   const handleClickNext = () => { setSongIndex( _ => songIndex < playlist.length - 1 ? songIndex + 1 : songIndex) };
   const handleClickPrev = () => { setSongIndex( _ => songIndex > 0 ? songIndex - 1 : songIndex) };
@@ -61,13 +69,13 @@ function App() {
 
         <div className="content" >
           <Routes>
-            <Route path="/" element={<SubscribedList />} />
+            <Route path="/" element={<SubscribedList subscriptions={subscriptions} />} />
             <Route path="/episodes/:uuid" element={<EpisodeList
               playTrack={playTrack}
               addToPlaylist={addToPlaylist}
               lightDark={lightDark}
             />} />
-           <Route path="/browse" element={<BrowseList lightDark={lightDark} />} />
+           <Route path="/browse" element={<BrowseList lightDark={lightDark} addToSubscriptions={addToSubscriptions} />} />
             <Route path="/search" element={<Search lightDark={lightDark}/>} />
             <Route path="/playlist" element={<Playlist playlist={playlist} deleteFromPlaylist={deleteFromPlaylist} lightDark = {lightDark}/>} />
             <Route path="/*" element={<Error />} />
