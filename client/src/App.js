@@ -63,7 +63,7 @@ function App() {
               lightDark={lightDark}
             />} />
             <Route path="/browse" element={<BrowseList lightDark={lightDark}/>} />
-            <Route path="/search" element={<Search />} />
+            <Route path="/search" element={<Search lightDark={lightDark}/>} />
             <Route path="/playlist" element={<Playlist playlist={playlist} />} />
             <Route path="/*" element={<Error />} />
           </Routes>
