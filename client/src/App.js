@@ -63,8 +63,8 @@ function App() {
               addToPlaylist={addToPlaylist}
               lightDark={lightDark}
             />} />
-            <Route path="/browse" element={<BrowseList lightDark={lightDark} />} />
-            <Route path="/search" element={<Search />} />
+           <Route path="/browse" element={<BrowseList lightDark={lightDark} />} />
+            <Route path="/search" element={<Search lightDark={lightDark}/>} />
             <Route path="/playlist" element={<Playlist playlist={playlist} deleteFromPlaylist={deleteFromPlaylist} lightDark = {lightDark}/>} />
             <Route path="/*" element={<Error />} />
           </Routes>
