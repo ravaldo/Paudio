@@ -42,7 +42,7 @@ const EpisodeCard = ({ episode, playTrack, addToPlaylist, lightDark, defaultImgU
       <div className={`EpisodeCard ${lightDark}`}>
         <img src={episode.imageUrl ? episode.imageUrl : defaultImgUrl} alt={`image of ${episode.name}`} />
         <div >
-          <h4>{title}</h4>
+          <h4>{episode.title}</h4>
           <div className='cardMain'>
             <div>
               <p>Duration: {episodeDuration()}</p>
