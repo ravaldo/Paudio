@@ -12,27 +12,16 @@
     text-decoration: none;
 }
 
-/* .menu a:visited {
-    text-decoration:none;
-    color:#f36427
-} */
-
-/* .menu > a {
-    color: whitesmoke;
-    font-size: x-small;
-} */
-
 .menu.light a {
     color: #222;
 } 
 
 .menu.dark a {
     color:whitesmoke
-}
+
 
 .menu a:hover {
-
-    color: #f36427
+   color: #f36427
 }
 
 
