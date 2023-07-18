@@ -11,7 +11,7 @@ const Playlist = ({playlist, deleteFromPlaylist}) => {
 
     const nodes = playlist.map(ep => {
         return <p> <PlayListCard episode = {ep} deleteFromPlaylist = {deleteFromPlaylist} /></p>
-    });
+   });
 
     return (
         <div>

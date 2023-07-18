@@ -16,6 +16,7 @@ import EpisodeList from "./components/EpisodeList";
 import Error from "./components/Error";
 import Test from "./components/Test";
 import Playlist from "./components/Playlist";
+import TaddyService from "./services/TaddyService";
 
 function App() {
 
@@ -23,6 +24,8 @@ function App() {
   const [playlist, setPlayList] = useState([]);
   const [songIndex, setSongIndex] = useState(0);
   const [widescreen, setWidescreen] = useState(false);
+  const [episode, setEpisode]= useState('')
+
 
   useEffect(() => {
     setContentHeight();
@@ -42,18 +45,19 @@ function App() {
   const playTrack = (episode) => {
     addToPlaylist(episode);
     setSongIndex(playlist.length);
+
   }
   const addToPlaylist = (episode) => setPlayList([...playlist, episode])
-  const deleteFromPlaylist = (episode) => setPlayList(playlist.filter(e => e.uuid !== episode.uuid))
-  const handleClickNext = () => { setSongIndex(_ => songIndex < playlist.length - 1 ? songIndex + 1 : songIndex) };
-  const handleClickPrev = () => { setSongIndex(_ => songIndex > 0 ? songIndex - 1 : songIndex) };
 
+  const deleteFromPlaylist = (episode) => setPlayList(playlist.filter(e => e.uuid !== episode.uuid))
+  const handleClickNext = () => { setSongIndex( _ => songIndex < playlist.length - 1 ? songIndex + 1 : songIndex) };
+  const handleClickPrev = () => { setSongIndex( _ => songIndex > 0 ? songIndex - 1 : songIndex) };
 
   return (
     <div className={`App ${lightDark}`}>
       <Router>
-
-        <Header toggleLightDark={toggleLightDark} />
+        
+        <Header toggleLightDark={toggleLightDark} lightDark={lightDark}/>
 
         <div className="content" >
           <Routes>
@@ -71,8 +75,10 @@ function App() {
         </div>
 
         <div className="player_footer">
-          <AudioPlayer
+
+          <AudioPlayer className="player" 
             src={playlist.length > 0 ? playlist[songIndex].audioUrl : null}
+            header={playlist.length>0?`Now playing: ${playlist[songIndex].name}`: ''}
             onPlay={e => console.log("onPlay")}
             onClickPrevious={handleClickPrev}
             onClickNext={handleClickNext}

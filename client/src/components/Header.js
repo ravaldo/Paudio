@@ -48,12 +48,12 @@ const Header = ({ toggleLightDark, lightDark }) => {
                     {getCurrentPage()}
                 </div>
                 <div className='headermenu'>
-                    <Menu />
+                    <Menu lightDark={lightDark}/>
                 </div>
-                <div>
-                    <p>
+                <div className='ldswitch'>
+                    
                     <Toggle onClick = {toggleLightDark}/>
-                    </p>
+                    
                     <p className='lightdark'>Dark/Light </p>
                 </div>
                 

@@ -6,31 +6,24 @@
     width: 40vw;
 }
 
-.menu > a {
-    text-decoration: none;
+.menu a {
     display:flex;
     flex-direction: column;
+    text-decoration: none;
 }
 
-.menu.dark > a {
-    color: #f36427
-}
-
-.menu.light > a {
-    color: #f36427
-}
-
-.menu > a:visited {
-    color:#f36427
+.menu.light a {
+    color: #222;
 } 
 
-.menu > a:visited {
-    color:#f36427
+.menu.dark a {
+    color:whitesmoke
+
+
+.menu a:hover {
+   color: #f36427
 }
 
-.menu > a:hover {
-    color: #f36427
-}
 
 @media (max-width:768px){
     .menu {

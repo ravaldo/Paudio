@@ -4,14 +4,14 @@ import BrowseCard from './BrowseCard';
 import topPodcastData from '../services/topPodcastData';
 
 
-const BrowseList = ({podcasts}) => {
+const BrowseList = () => {
 
-    // const [podcasts, setPodcasts] = useState([]);
+    const [podcasts, setPodcasts] = useState([]);
 
-    // useEffect(() => {
+    useEffect(() => {
         // TaddyService.searchForSeries(podcastSeries.name).then(data => setPodcasts(data))
-        // setPodcasts(topPodcastData)
-    // }, []);
+        setPodcasts(topPodcastData)
+    }, []);
 
     
     const podcastsList = podcasts.map(p => <BrowseCard podcastSeries={p} key={p.uuid} /> );

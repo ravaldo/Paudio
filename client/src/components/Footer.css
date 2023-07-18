@@ -10,16 +10,16 @@
 }
 
 .Footer.light a {
-    color: #222;
+    color: #222
 }
 
 .Footer a:hover {
     color:#f36427;   
 }
 
-.Footer.dark a:active {
+/* .Footer.dark a:active {
     color:#f36427;
-}
+} */
 
 @media (min-width:768px) {
     .Footer {
