@@ -29,11 +29,12 @@
 
 .EpisodeCard #icon {
   margin-right: 0.3em;
-  font-size: 3em;
+  font-size: 2em;
 }
 
 .EpisodeCard #icon:hover {
   cursor: pointer;
+  color: #f36427;
 }
 
 .EpisodeCard.dark {}
