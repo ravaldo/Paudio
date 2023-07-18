@@ -43,6 +43,19 @@
     transition: background-color 3s, color 3s;
 }
 
+.App .rhap_header {
+    margin-bottom: 10px;
+    color:#f36427;
+    font-weight: 700;
+  }
+
+@media (min-width:768px) {
+    .App.rhap_header {
+        display:flex;
+        justify-content: center;
+      }
+}
+
 .player_footer {
     width: 100%;
     bottom: 0;

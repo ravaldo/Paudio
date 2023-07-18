@@ -76,7 +76,7 @@ function App() {
         </div>
        
         <div className="player_footer">
-          <AudioPlayer className="player"
+          <AudioPlayer className="player" 
             src={playlist.length>0? playlist[songIndex].audioUrl: null}
             header={playlist.length>0?`Now playing: ${playlist[songIndex].name}`: ''}
             onPlay={e => console.log("onPlay")}
