@@ -21,6 +21,7 @@
 .content {
     overflow-y: scroll;
     overflow-x: hidden;
+    padding-top: 5px;
 }
 
 .header-container {
@@ -41,6 +42,19 @@
 .App.light .rhap_container {
     background-color: rgb(231, 230, 230);
     transition: background-color 3s, color 3s;
+}
+
+.App .rhap_header {
+    margin-bottom: 10px;
+    color:#f36427;
+    font-weight: 700;
+  }
+
+@media (min-width:768px) {
+    .App.rhap_header {
+        display:flex;
+        justify-content: center;
+      }
 }
 
 .player_footer {

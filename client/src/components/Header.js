@@ -2,9 +2,10 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
-import Toggle from './toggle'
 import './Header.css'
 import Menu from './Menu';
+import Toggle from './toggle'
+
 
 
 const Header = ({ toggleLightDark, lightDark }) => {
@@ -49,12 +50,12 @@ const Header = ({ toggleLightDark, lightDark }) => {
                     {getCurrentPage()}
                 </div>
                 <div className='headermenu'>
-                    <Menu />
+                    <Menu lightDark={lightDark}/>
                 </div>
-                <div>
-                    <p>
+                <div className='ldswitch'>
+                    
                     <Toggle onClick = {toggleLightDark}/>
-                    </p>
+                    
                     <p className='lightdark'>Dark/Light </p>
                 </div>
                 

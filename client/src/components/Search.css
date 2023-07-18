@@ -18,8 +18,18 @@ html {
   max-width: 561px; 
 }
 
-.searchbox input[type="search"] {
+.searchbox.dark input[type="search"] {
   border: var(--border-width) solid var(--white);
+  border-radius: var(--border-radius);
+  height: 100%;
+  /* for animation */
+  width: 10%;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+.searchbox.light input[type="search"] {
+  border: var(--border-width) solid #222;
   border-radius: var(--border-radius);
   height: 100%;
   /* for animation */
@@ -33,34 +43,62 @@ html {
   width: 100%;
 }
 
-.searchbox svg {
+.searchbox.dark svg {
   fill: var(--white);
   height: var(--icon-size);
   width: var(--icon-size);
 }
 
-.searchbox input[type="search"] {
+.searchbox.light svg {
+  fill: #222;
+  height: var(--icon-size);
+  width: var(--icon-size);
+}
+
+.searchbox.dark input[type="search"] {
   -webkit-appearance: none;
   color: var(--white); 
-  font-family: 'Noto Sans', Verdana, sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
   /* font-size: 1rem; */
   font-size: small;
 }
-.searchbox input[type="search"]::placeholder {
+
+.searchbox.light input[type="search"] {
+  -webkit-appearance: none;
+  color: #222; 
+  font-family: Arial, Helvetica, sans-serif;
+  /* font-size: 1rem; */
+  font-size: small;
+}
+
+.searchbox.dark input[type="search"]::placeholder {
   color: whitesmoke;
   opacity: 1; 
 }
 
+.searchbox.light input[type="search"]::placeholder {
+  color: #222;
+  opacity: 1; 
+}
 
 .searchbox {
   position: relative;
 }
-.searchbox svg {
+
+.searchbox.dark svg {
   position: absolute;
   left: var(--side-margin);
   top: var(--icon-vertical-margin);
   bottom: var(--icon-vertical-margin);
 }
+
+.searchbox.light svg {
+  position: absolute;
+  left: var(--side-margin);
+  top: var(--icon-vertical-margin);
+  bottom: var(--icon-vertical-margin);
+}
+
 .searchbox input[type="search"] {
   padding-left: calc( var(--side-margin) + var(--icon-size) + 4px);
   padding-right: var(--side-margin);
@@ -78,6 +116,7 @@ input[type="search"]::-webkit-search-decoration {
   background: transparent;
 }
 
+/* glow effect */
 .searchbox input[type="search"]:focus {
   border-color: var(--focus-orange);
   box-shadow: 0px 0px 5px var(--focus-orange);
@@ -101,6 +140,9 @@ body .searchbox {
   top: 48px;
 }
 
+/* .searchbox input.dark a {
+  color: whitesmoke;
+} */
 
 
 
