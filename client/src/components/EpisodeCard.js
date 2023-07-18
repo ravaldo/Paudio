@@ -26,23 +26,20 @@ const EpisodeCard = ({ episode, playTrack, addToPlaylist, lightDark, defaultImgU
     return `${formattedHours}:${formattedMinutes}:${formattedSeconds}`;
   }
 
-  // const title = () => {
-  //   if (window.addEventListener('resize', () => setWidescreen(window.innerWidth > 768));)
-  //     return ( episode.name.split(' ').slice(0,14).join(' '));
-  //   else
-  //     return(episode.title)
-
-  // }
-  
-
-
+  const title = () => {
+    if (window.innerWidth < 768) {
+      return ( episode.name.split(' ').slice(0,10).join(' ') + " ...");
+  }
+    else
+      return(episode.name)
+  }
 
   return (
     <>
       <div className={`EpisodeCard ${lightDark}`}>
         <img src={episode.imageUrl ? episode.imageUrl : defaultImgUrl} alt={`image of ${episode.name}`} />
         <div >
-          <h4>{episode.title}</h4>
+          <h4>{title()}</h4>
           <div className='cardMain'>
             <div>
               <p>Duration: {episodeDuration()}</p>
