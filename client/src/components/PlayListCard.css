@@ -21,7 +21,9 @@
 }
 
 .PlaylistCard button {
-    margin-left: 10px;
+    display:flex;
+    width: 25;
+    margin: 0 5%;
 }
 
 /* .PlaylistCard.light {
