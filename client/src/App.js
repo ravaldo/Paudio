@@ -16,7 +16,7 @@ import EpisodeList from "./components/EpisodeList";
 import Error from "./components/Error";
 import Test from "./components/Test";
 import Playlist from "./components/Playlist";
-// import TaddyService from "./services/TaddyService";
+import TaddyService from "./services/TaddyService";
 
 function App() {
 
@@ -24,6 +24,8 @@ function App() {
   const [playlist, setPlayList] = useState([]);
   const [songIndex, setSongIndex] = useState(0);
   const [widescreen, setWidescreen] = useState(false);
+  const [episode, setEpisode]= useState('')
+
 
   useEffect(() => {
     setContentHeight();
@@ -76,7 +78,7 @@ function App() {
         <div className="player_footer">
           <AudioPlayer className="player"
             src={playlist.length>0? playlist[songIndex].audioUrl: null}
-            header="This is where now playing will appear."
+            header={playlist.length>0?`Now playing: ${playlist[songIndex].name}`: ''}
             onPlay={e => console.log("onPlay")}
             onClickPrevious={handleClickPrev}
             onClickNext={handleClickNext}
