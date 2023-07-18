@@ -11,12 +11,15 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Search from "./components/Search";
 import SubscribedList from "./components/SubscribedList";
+import Playlist from "./components/Playlist";
 import BrowseList from "./components/BrowseList";
 import EpisodeList from "./components/EpisodeList";
 import Error from "./components/Error";
 import Test from "./components/Test";
-import Playlist from "./components/Playlist";
+
 import TaddyService from "./services/TaddyService";
+import topPodcastData from "./services/topPodcastData";
+
 
 function App() {
 
@@ -25,7 +28,6 @@ function App() {
   const [songIndex, setSongIndex] = useState(0);
   const [widescreen, setWidescreen] = useState(false);
   const [episode, setEpisode]= useState('')
-
 
   useEffect(() => {
     setContentHeight();
@@ -45,10 +47,9 @@ function App() {
   const playTrack = (episode) => {
     addToPlaylist(episode);
     setSongIndex(playlist.length);
-
   }
-  const addToPlaylist = (episode) => setPlayList([...playlist, episode])
 
+  const addToPlaylist = (episode) => setPlayList([...playlist, episode])
   const deleteFromPlaylist = (episode) => setPlayList(playlist.filter(e => e.uuid !== episode.uuid))
   const handleClickNext = () => { setSongIndex( _ => songIndex < playlist.length - 1 ? songIndex + 1 : songIndex) };
   const handleClickPrev = () => { setSongIndex( _ => songIndex > 0 ? songIndex - 1 : songIndex) };
@@ -67,7 +68,7 @@ function App() {
               addToPlaylist={addToPlaylist}
               lightDark={lightDark}
             />} />
-           <Route path="/browse" element={<BrowseList lightDark={lightDark} />} />
+           <Route path="/browse" element={<BrowseList podcasts={topPodcastData} lightDark={lightDark} />} />
             <Route path="/search" element={<Search lightDark={lightDark}/>} />
             <Route path="/playlist" element={<Playlist playlist={playlist} deleteFromPlaylist={deleteFromPlaylist} lightDark = {lightDark}/>} />
             <Route path="/*" element={<Error />} />

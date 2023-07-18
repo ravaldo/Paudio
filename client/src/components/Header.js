@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
 import './Header.css'
 import Menu from './Menu';
-import Toggle from './toggle'
+import Toggle from './Toggle'
 
 
 

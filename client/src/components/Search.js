@@ -27,9 +27,6 @@ const Search = ({ lightDark }) => {
     const handleClick = () => {
         if (searchTerm.length > 2) {
             TaddyService.searchForSeries(searchTerm).then(data => setResults(data))
-            results.forEach(element => {
-              repo.insertSeriesData(element);
-            });
         }
     };
 

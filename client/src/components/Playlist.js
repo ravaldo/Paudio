@@ -14,7 +14,7 @@ const Playlist = ({playlist, deleteFromPlaylist}) => {
    });
 
     return (
-        <div>
+        <div> 
             {nodes}
         </div>
     )

@@ -5,7 +5,7 @@ import dummyEpisodes from "./dummyEpisodes";
 
 const baseURL = 'https://api.taddy.org/';
 
-const returnDummyData = true;
+const returnDummyData = false;
 
 const TaddyService = {
   searchForSeries(term) {

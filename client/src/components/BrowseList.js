@@ -1,24 +1,28 @@
 import React, { useState, useEffect } from 'react';
 import TaddyService from '../services/TaddyService';
 import BrowseCard from './BrowseCard';
+import { Link } from 'react-router-dom';
 import topPodcastData from '../services/topPodcastData';
 
 
-const BrowseList = () => {
+const BrowseList = ({podcasts}) => {
 
-    const [podcasts, setPodcasts] = useState([]);
+    // const [podcasts, setPodcasts] = useState([]);
 
     useEffect(() => {
-        // TaddyService.searchForSeries(podcastSeries.name).then(data => setPodcasts(data))
-        setPodcasts(topPodcastData)
+        // setPodcasts(topPodcastData)
     }, []);
 
     
-    const podcastsList = podcasts.map(p => <BrowseCard podcastSeries={p} key={p.uuid} /> );
-
-
-    if (podcasts.length === 0)
+if (podcasts.length === 0)
         return;
+
+    const podcastsList = podcasts.map(p =>
+        <Link to={`/episodes/${p.uuid}`}><BrowseCard podcastSeries={p} key={p.uuid}/> </Link>
+    );
+
+
+    
     return (
         <div className="browseList">
             {podcastsList}

@@ -9486,4 +9486,5 @@ const topPodcastData =
         }
       ]
 
-export default topPodcastData;
+// export default topPodcastData;
+module.exports = topPodcastData;
