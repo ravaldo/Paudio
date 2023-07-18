@@ -2,6 +2,7 @@ import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
 import './Header.css'
 import Menu from './Menu';
 import Toggle from './Toggle'
@@ -53,12 +54,10 @@ const Header = ({ toggleLightDark, lightDark }) => {
                     <Menu lightDark={lightDark}/>
                 </div>
                 <div className='ldswitch'>
-                    
-                    <Toggle onClick = {toggleLightDark}/>
-                    
-                    <p className='lightdark'>Dark/Light </p>
+                {/* <FontAwesomeIcon className="lightbulb" icon={faLightbulb} size='xl'/> */}
+                    <Toggle className='lightdark' onClick = {toggleLightDark}/>
+                    <p className='lightdark'>Light/Dark</p>
                 </div>
-                
             </div>
         </div>
     );

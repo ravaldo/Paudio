@@ -5,24 +5,16 @@ import { Link } from 'react-router-dom';
 import topPodcastData from '../services/topPodcastData';
 
 
-const BrowseList = ({podcasts}) => {
 
-    // const [podcasts, setPodcasts] = useState([]);
+const BrowseList = ({ podcasts, addToSubscriptions }) => {
 
-    useEffect(() => {
-        // setPodcasts(topPodcastData)
-    }, []);
-
-    
-if (podcasts.length === 0)
+    if (podcasts.length === 0)
         return;
 
     const podcastsList = podcasts.map(p =>
-        <Link to={`/episodes/${p.uuid}`}><BrowseCard podcastSeries={p} key={p.uuid}/> </Link>
+        <Link to={`/episodes/${p.uuid}`}> <BrowseCard podcastSeries={p} key={p.uuid} addToSubscriptions={addToSubscriptions} /> </Link>
     );
 
-
-    
     return (
         <div className="browseList">
             {podcastsList}

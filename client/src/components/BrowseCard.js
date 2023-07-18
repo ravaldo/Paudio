@@ -1,8 +1,11 @@
 import React from 'react'
 import './BrowseCard.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquarePlus } from '@fortawesome/free-regular-svg-icons';
 
-const BrowseCard = ({ podcastSeries, lightDark }) => {
-    
+
+const BrowseCard = ({ podcastSeries, lightDark, addToSubscriptions }) => {
+
     if (!podcastSeries)
         return null;
 
@@ -19,6 +22,9 @@ const BrowseCard = ({ podcastSeries, lightDark }) => {
                 <h4 classname="podcastName">{podcastSeries.name}</h4>
                 <h6 className="pocastTotalEps">{podcastSeries.totalEpisodesCount} Episodes</h6>
                 <h6 classname="podcastDescription">{shortDescription()}...</h6>
+            </div>
+            <div className='subscribeButton'>
+                <span id="icon"><FontAwesomeIcon icon={faSquarePlus} onClick={() => addToSubscriptions(podcastSeries)} size='xl'/></span>
             </div>
         </div>
     )
