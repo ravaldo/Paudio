@@ -44,16 +44,17 @@ function App() {
     setSongIndex(playlist.length);
   }
   const addToPlaylist = (episode) => setPlayList([...playlist, episode])
-  const handleClickNext = () => { setSongIndex( _ => songIndex < playlist.length - 1 ? songIndex+1 : songIndex )};
-  const handleClickPrev = () => { setSongIndex( _ => songIndex > 0 ? songIndex-1 : songIndex )};
-  
+  const deleteFromPlaylist = (episode) => setPlayList(playlist.filter(e => e.uuid !== episode.uuid))
+  const handleClickNext = () => { setSongIndex(_ => songIndex < playlist.length - 1 ? songIndex + 1 : songIndex) };
+  const handleClickPrev = () => { setSongIndex(_ => songIndex > 0 ? songIndex - 1 : songIndex) };
+
 
   return (
     <div className={`App ${lightDark}`}>
       <Router>
-        
+
         <Header toggleLightDark={toggleLightDark} />
-        
+
         <div className="content" >
           <Routes>
             <Route path="/" element={<SubscribedList />} />
@@ -62,16 +63,16 @@ function App() {
               addToPlaylist={addToPlaylist}
               lightDark={lightDark}
             />} />
-            <Route path="/browse" element={<BrowseList lightDark={lightDark}/>} />
+           <Route path="/browse" element={<BrowseList lightDark={lightDark} />} />
             <Route path="/search" element={<Search lightDark={lightDark}/>} />
-            <Route path="/playlist" element={<Playlist playlist={playlist} />} />
+            <Route path="/playlist" element={<Playlist playlist={playlist} deleteFromPlaylist={deleteFromPlaylist} lightDark = {lightDark}/>} />
             <Route path="/*" element={<Error />} />
           </Routes>
         </div>
-       
+
         <div className="player_footer">
           <AudioPlayer
-            src={playlist.length>0? playlist[songIndex].audioUrl: null}
+            src={playlist.length > 0 ? playlist[songIndex].audioUrl : null}
             onPlay={e => console.log("onPlay")}
             onClickPrevious={handleClickPrev}
             onClickNext={handleClickNext}

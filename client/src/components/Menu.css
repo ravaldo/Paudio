@@ -13,19 +13,19 @@
 }
 
 .menu.dark > a {
-    color: whitesmoke
+    color: #f36427
 }
 
 .menu.light > a {
-    color: #222;
+    color: #f36427
 }
 
-.menu.dark > a:visited {
-    color:whitesmoke;
+.menu > a:visited {
+    color:#f36427
 } 
 
 .menu > a:visited {
-    color:#222;
+    color:#f36427
 }
 
 .menu > a:hover {
