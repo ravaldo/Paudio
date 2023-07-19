@@ -77,8 +77,8 @@ function App() {
               addToPlaylist={addToPlaylist}
               lightDark={lightDark}
             />} />
-            <Route path="/browse" element={<BrowseList podcasts={popularPodcasts} lightDark={lightDark} addToSubscriptions={addToSubscriptions} />} />
-            <Route path="/search" element={<Search lightDark={lightDark} addToSubscriptions={addToSubscriptions}/>} />
+            <Route path="/browse" element={<BrowseList subscriptions={subscriptions} podcasts={popularPodcasts} lightDark={lightDark} addToSubscriptions={addToSubscriptions} />} />
+            <Route path="/search" element={<Search subscriptions={subscriptions} lightDark={lightDark} addToSubscriptions={addToSubscriptions}/>} />
             <Route path="/playlist" element={<Playlist playlist={playlist} deleteFromPlaylist={deleteFromPlaylist} lightDark={lightDark} />} />
             <Route path="/*" element={<Error />} />
           </Routes>
