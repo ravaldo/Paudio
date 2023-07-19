@@ -1,31 +1,21 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import './BrowseCard.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-regular-svg-icons';
 import {faStar as staricon} from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import getDetails from './episodeUtility';
 
-const BrowseCard = ({ podcastSeries, lightDark, addToSubscriptions, subscriptions }) => {
+const BrowseCard = ({ podcastSeries, lightDark, addRemoveSubscription, subscriptions }) => {
 
-    // const [icon, setIcon] = useState(null)
-
-    if (!podcastSeries)
-        return null;
-
-    const shortDescription = () => {
-        if (podcastSeries.description)
-            return podcastSeries.description.split(' ').slice(0, 18).join(' ')
-        return "Description not available"
-    }
-
-    const result = () => {
+    useEffect(() => {
         
-        return subscriptions.find(p => p.uuid === podcastSeries.uuid)
+    }, [subscriptions, podcastSeries]);
 
-    }
-    if(!result())
-        console.log(result())
+    if (!subscriptions || !podcastSeries)
+        return "Loading...";
 
+    const isSubscribed = () => subscriptions.filter(p => p.uuid === podcastSeries.uuid).length > 0;
 
     return (
         <>
@@ -37,14 +27,13 @@ const BrowseCard = ({ podcastSeries, lightDark, addToSubscriptions, subscription
                     <div>
                         <h4>{podcastSeries.name}</h4>
                         <p>{podcastSeries.totalEpisodesCount} Episodes</p>
-                        <p>{shortDescription()}...</p>
+                        <p>{getDetails(podcastSeries).shortDescription}...</p>
                     </div>
 
                     <div>
-                        <span id="icon" onClick={(event) => {
-                            event.stopPropagation()
-                            addToSubscriptions(podcastSeries)
-                        }}><FontAwesomeIcon icon={faStar}/></span>
+                        <span id="icon" onClick={() => addRemoveSubscription(podcastSeries)} >
+                        {isSubscribed() ? <FontAwesomeIcon icon={staricon}/> : <FontAwesomeIcon icon={faStar}/>}
+                        </span>
                     </div>
                 </div>
 

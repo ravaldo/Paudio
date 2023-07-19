@@ -5,7 +5,7 @@ import BrowseList from './BrowseList';
 // import repo from '../services/Repository';
 
 
-const Search = ({ lightDark, addToSubscriptions, subscriptions}) => {
+const Search = ({ lightDark, addRemoveSubscription, subscriptions}) => {
 
     const [searchTerm, setSearchTerm] = useState('');
     const [results, setResults] = useState([]);
@@ -52,7 +52,7 @@ const Search = ({ lightDark, addToSubscriptions, subscriptions}) => {
         />
         
       </div>
-      <div className="adjust">{results.length > 0 ? <BrowseList subscriptions={subscriptions} podcasts={results} addToSubscriptions={addToSubscriptions} />: null}</div>
+      <div className="adjust">{results.length > 0 ? <BrowseList subscriptions={subscriptions} podcasts={results} addRemoveSubscription={addRemoveSubscription} />: null}</div>
       </>
     );
 }

@@ -38,7 +38,11 @@ function App() {
     PaudioService.getAllFavourites().then(data => setSubscriptions(data))
   }, [])
 
-
+  // because our header and footer are sticky that leaves us with a scrollable
+  // portion in the middle of the screen. the content there should not be hidden
+  // by the either the footer/header. by setting the content height exactly to 
+  // the remaining pixels we can get ensure no content is hidden and the scroll
+  // bar lines up nicely with the content portion
   const setContentHeight = () => {
     const footerHeight = document.querySelector(".player_footer").offsetHeight;
     const headerHeight = document.querySelector(".Header").offsetHeight;
@@ -55,10 +59,20 @@ function App() {
     setSongIndex(playlist.length);
   }
 
-  const addToSubscriptions = (podcast) => {
-    PaudioService.addOneFavourite(podcast)
-    PaudioService.addOnePopular(podcast)
+  const addRemoveSubscription = (podcast) => {
+    if (subscriptions.filter(p => p.uuid === podcast.uuid).length == 0) {
+      // if the given podcast is not in subscriptions already
+      // then add it to the favourites db and update state
+      PaudioService.addOneFavourite(podcast)
+      setSubscriptions([...subscriptions, podcast])
+    }
+    else {
+      // deleteit from the favourites database and remove it from subscriptions state
+      PaudioService.deleteOneFavourite(podcast)
+      setSubscriptions(subscriptions.filter(p => p.uuid != podcast.uuid))
+    }
   };
+
   const addToPlaylist = (episode) => setPlayList([...playlist, episode])
   const deleteFromPlaylist = (episode) => setPlayList(playlist.filter(e => e.uuid !== episode.uuid))
   const handleClickNext = () => { setSongIndex(_ => songIndex < playlist.length - 1 ? songIndex + 1 : songIndex) };
@@ -72,14 +86,14 @@ function App() {
 
         <div className="content" >
           <Routes>
-            <Route path="/" element={<SubscribedList subscriptions={subscriptions} />} />
+            <Route path="/" element={<SubscribedList subscriptions={subscriptions} addRemoveSubscription={addRemoveSubscription} />} />
             <Route path="/episodes/:uuid" element={<EpisodeList
               playTrack={playTrack}
               addToPlaylist={addToPlaylist}
               lightDark={lightDark}
             />} />
-            <Route path="/browse" element={<BrowseList subscriptions={subscriptions} podcasts={popularPodcasts} lightDark={lightDark} addToSubscriptions={addToSubscriptions} />} />
-            <Route path="/search" element={<Search subscriptions={subscriptions} lightDark={lightDark} addToSubscriptions={addToSubscriptions}/>} />
+            <Route path="/browse" element={<BrowseList subscriptions={subscriptions} podcasts={popularPodcasts} lightDark={lightDark} addRemoveSubscription={addRemoveSubscription} />} />
+            <Route path="/search" element={<Search subscriptions={subscriptions} lightDark={lightDark} addRemoveSubscription={addRemoveSubscription}/>} />
             <Route path="/playlist" element={<Playlist playlist={playlist} deleteFromPlaylist={deleteFromPlaylist} lightDark={lightDark} />} />
             <Route path="/*" element={<Error />} />
           </Routes>
