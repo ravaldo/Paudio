@@ -27,7 +27,6 @@ const PlayListCard = ({ episode, deleteFromPlaylist, lightDark }) => {
         <>
             <div className={`PlaylistCard ${lightDark}`}>
 
-
                 <img src={image} alt={`image of ${episode.name}`} />
                 <div>
                     <h4>{title}</h4>

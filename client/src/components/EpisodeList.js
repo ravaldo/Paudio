@@ -13,9 +13,16 @@ const EpisodeList = ({ playTrack, addToPlaylist, lightDark }) => {
     const { uuid } = useParams();
 
     useEffect(() => {
-        // TaddyService.searchForEpisodes(podcastName).then(data => setPodcast(data))
-        // setPodcast(topPodcastData.find(p => p.uuid === uuid))
-        PaudioService.getOnePopular(uuid).then(res => setPodcast(res));
+        PaudioService.getOnePopular(uuid).then(result => {
+            if(!result)
+                TaddyService.searchForEpisodesWithUUID(uuid).then(data => {
+                    setPodcast(data)
+                    PaudioService.addOnePopular(data)
+                })
+            else
+                setPodcast(result);
+        });
+        
     }, []);
 
     if (!podcast)
@@ -35,6 +42,7 @@ const EpisodeList = ({ playTrack, addToPlaylist, lightDark }) => {
 
     // const episodesList = () => {
     //     if (!podcast.episodes) {
+    //         console.log("grabbing")
     //         TaddyService.searchForEpisodes(podcast.name).then(data => setPodcast(data))
     //     }
     //     else {

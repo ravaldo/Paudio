@@ -141,6 +141,83 @@ const TaddyService = {
       .catch(error => {
         console.error('Error:', error);
       })
+    }
+      ,
+
+      searchForEpisodesWithUUID(term) {
+        const query = `
+          query SearchQuery($term: ID!) {
+            getPodcastSeries(uuid: $term) {
+              uuid
+              datePublished
+              name
+              description
+              imageUrl
+              itunesId
+              hash
+              childrenHash
+              episodes(sortOrder: LATEST, page: 1, limitPerPage: 25) {
+                uuid
+                name
+                datePublished
+                description
+                audioUrl
+                imageUrl
+                fileLength
+                fileType
+                duration
+                podcastSeries {
+                  uuid
+                }
+              }
+              totalEpisodesCount
+              genres
+              itunesInfo {
+                uuid
+                hash
+                subtitle
+                summary
+                baseArtworkUrl
+                baseArtworkUrlOf
+                publisherId
+                publisherName
+                country
+              }
+              seriesType
+              language
+              contentType
+              isExplicitContent
+              copyright
+              websiteUrl
+              rssUrl
+              rssOwnerName
+              rssOwnerPublicEmail
+              authorName
+            }
+          }
+        `;
+    
+        const variables = { term };
+    
+        if (returnDummyData)
+          return dummyEpisodes;
+        return fetch(baseURL, {
+          method: 'POST',
+          body: JSON.stringify({
+            query,
+            variables
+          }),
+          headers: {
+            'Content-Type': 'application/json',
+            'X-USER-ID': taddy_cred['X-USER-ID'],
+            'X-API-KEY': taddy_cred['X-API-KEY']
+          }
+        })
+          .then(res => res.json())
+          .then(response => response.data.getPodcastSeries)
+          .catch(error => {
+            console.error('Error:', error);
+          })
 
   }
 

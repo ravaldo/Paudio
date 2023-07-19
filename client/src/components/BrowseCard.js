@@ -19,7 +19,7 @@ const BrowseCard = ({ podcastSeries, lightDark, addToSubscriptions }) => {
         <>
             <div className={`BrowseCard ${lightDark}`}>
 
-            <Link to={`/episodes/${podcastSeries.uuid}`}>  <img src={podcastSeries.imageUrl} alt={`cover image for ${podcastSeries.name}`} /></Link>
+            <Link to={`/episodes/${podcastSeries.uuid}`}> <img src={podcastSeries.imageUrl} alt={`cover image for ${podcastSeries.name}`} /></Link>
 
                 <div className='cardMain'>
                     <div>

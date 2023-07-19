@@ -10,8 +10,8 @@ const SubscribedList = ({subscriptions}) => {
     const [podcasts, setPodcasts] = useState([]);
 
     useEffect(() => {
-        PaudioService.getAllFavourites().then(results => setPodcasts(results))
-    }, [podcasts]);
+        setPodcasts(subscriptions)
+    }, []);
 
     if (!podcasts || podcasts.length === 0 )
         return "Library currently empty ...";

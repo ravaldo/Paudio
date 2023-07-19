@@ -35,6 +35,7 @@ function App() {
   useEffect(() => {
     setContentHeight();
     PaudioService.getAllPopular().then(data => setPopularPodcasts(data))
+    PaudioService.getAllFavourites().then(data => setSubscriptions(data))
   }, [])
 
 
