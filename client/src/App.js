@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AudioPlayer from 'react-h5-audio-player';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -31,6 +31,8 @@ function App() {
   const [widescreen, setWidescreen] = useState(false);
   const [subscriptions, setSubscriptions] = useState([]);
   const [popularPodcasts, setPopularPodcasts] = useState([]);
+  const [playerHeader, setPlayerHeader] = useState('');
+
 
   useEffect(() => {
     setContentHeight();
@@ -73,10 +75,31 @@ function App() {
     }
   };
 
+  const audioPlayerRef = useRef(null);
   const addToPlaylist = (episode) => setPlayList([...playlist, episode])
-  const deleteFromPlaylist = (episode) => setPlayList(playlist.filter(e => e.uuid !== episode.uuid))
+  const handlePlay = () => { setPlayerHeader(playlist.length > 0 ? `Now playing: ${playlist[songIndex].name}` : '') };
   const handleClickNext = () => { setSongIndex(_ => songIndex < playlist.length - 1 ? songIndex + 1 : songIndex) };
   const handleClickPrev = () => { setSongIndex(_ => songIndex > 0 ? songIndex - 1 : songIndex) };
+  const deleteFromPlaylist = (episode) => {
+    // need to adjust songIndex
+    let epIndex = 0
+    for (let i = 0; i < playlist.length; i++) {
+      if (playlist[i].uuid == episode.uuid)
+        epIndex = i;
+    }
+
+    // if (epIndex > songIndex) //do nothing
+    if (epIndex == songIndex){ // if removing current, then reset index and stop playing
+      setSongIndex(0);
+      audioPlayerRef.current.audio.current.pause();
+      setPlayerHeader('')
+      // console.log(audioPlayerRef.current)
+    }
+    if (epIndex < songIndex) // if removing prior song then decrement
+      setSongIndex(songIndex-1)
+    setPlayList(playlist.filter(e =>e.uuid !== episode.uuid));
+  };
+  
 
   return (
     <div className={`App ${lightDark}`}>
@@ -102,9 +125,10 @@ function App() {
         <div className="player_footer">
 
           <AudioPlayer className="player"
+            ref={audioPlayerRef}
             src={playlist.length > 0 ? playlist[songIndex].audioUrl : null}
-            header={playlist.length > 0 ? `Now playing: ${playlist[songIndex].name}` : ''}
-            onPlay={e => console.log("onPlay")}
+            header={playerHeader}
+            onPlay={handlePlay}
             onClickPrevious={handleClickPrev}
             onClickNext={handleClickNext}
             onEnded={handleClickNext}
