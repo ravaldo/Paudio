@@ -7,7 +7,7 @@ import getDetails from './episodeUtility';
 
 
 
-const PlayListCard = ({ episode, deleteFromPlaylist, lightDark }) => {
+const PlayListCard = ({ episode, deleteFromPlaylist,  }) => {
 
     const [image, setImage] = useState('')
 
@@ -25,7 +25,7 @@ const PlayListCard = ({ episode, deleteFromPlaylist, lightDark }) => {
 
     return (
         <>
-            <div className={`PlaylistCard ${lightDark}`}>
+            <div className={`PlaylistCard `}>
 
 
                 <img src={image} alt={`image of ${episode.name}`} />

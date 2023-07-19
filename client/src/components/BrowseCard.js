@@ -2,9 +2,12 @@ import React from 'react'
 import './BrowseCard.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-regular-svg-icons';
+import {faStar as staricon} from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 
-const BrowseCard = ({ podcastSeries, lightDark, addToSubscriptions }) => {
+const BrowseCard = ({ podcastSeries, lightDark, addToSubscriptions, subscriptions }) => {
+
+    // const [icon, setIcon] = useState(null)
 
     if (!podcastSeries)
         return null;
@@ -14,6 +17,15 @@ const BrowseCard = ({ podcastSeries, lightDark, addToSubscriptions }) => {
             return podcastSeries.description.split(' ').slice(0, 18).join(' ')
         return "Description not available"
     }
+
+    const result = () => {
+        
+        return subscriptions.find(p => p.uuid === podcastSeries.uuid)
+
+    }
+    if(!result())
+        console.log(result())
+
 
     return (
         <>
@@ -32,7 +44,7 @@ const BrowseCard = ({ podcastSeries, lightDark, addToSubscriptions }) => {
                         <span id="icon" onClick={(event) => {
                             event.stopPropagation()
                             addToSubscriptions(podcastSeries)
-                        }}><FontAwesomeIcon icon={faStar}  /></span>
+                        }}><FontAwesomeIcon icon={faStar}/></span>
                     </div>
                 </div>
 
