@@ -5,6 +5,7 @@
   align-items: center;
   border-radius: 5px;
   gap: 15px;
+  color: whitesmoke
 }
 
 .PlaylistCard img {
@@ -36,9 +37,9 @@
     color: #f36427;
 }
 
-.PlaylistCard .dark {}
+/* .PlaylistCard .dark {}
 
-.PlaylistCard .light {}
+.PlaylistCard .light {} */
 
 .PlaylistCard .light+hr {
     border-color: rgb(223, 228, 233);
