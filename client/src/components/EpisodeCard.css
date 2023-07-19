@@ -7,8 +7,13 @@
   gap: 15px;
 }
 
+.EpisodeCard img {
+  width: 150px;
+  border-radius: 5px;
+}
+
 .EpisodeCard h4 {
-  margin: 0;
+  margin: 8px 0 0 0;
 }
 
 .EpisodeCard > div {
@@ -19,12 +24,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* max-width: 30%; */
-}
-
-.EpisodeCard img {
-  width: 150px;
-  border-radius: 5px;
 }
 
 .EpisodeCard #icon {
@@ -48,9 +47,3 @@
   border-color: rgb(223, 228, 233);
 }
 
-@media (max-width: 600px) {
-  .EpisodeCard #icon {
-    margin-right: 0.3em;
-    font-size: 2em;
-  }
-}

@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import TaddyService from '../services/TaddyService'
+import TaddyService from '../services/TaddyService.mjs'
 import "./Search.css";
 import BrowseList from './BrowseList';
 // import repo from '../services/Repository';
 
 
-const Search = ({ lightDark }) => {
+const Search = ({ lightDark, addToSubscriptions}) => {
 
     const [searchTerm, setSearchTerm] = useState('');
     const [results, setResults] = useState([]);
@@ -52,7 +52,7 @@ const Search = ({ lightDark }) => {
         />
         
       </div>
-      <div className="adjust">{results.length > 0 ? <BrowseList podcasts={results}/>: null}</div>
+      <div className="adjust">{results.length > 0 ? <BrowseList podcasts={results} addToSubscriptions={addToSubscriptions} />: null}</div>
       </>
     );
 }

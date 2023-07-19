@@ -1,24 +1,20 @@
 import React, { useState, useEffect } from 'react';
-import TaddyService from '../services/TaddyService';
 import BrowseCard from './BrowseCard';
 import { Link } from 'react-router-dom';
-import topPodcastData from '../services/topPodcastData';
-
-
 
 const BrowseList = ({ podcasts, addToSubscriptions }) => {
 
-    if (podcasts.length === 0)
-        return;
-
+    if (!podcasts || podcasts.length === 0 )
+        return "Loading...";
+    
     const podcastsList = podcasts.map(p =>
-        <Link to={`/episodes/${p.uuid}`}> <BrowseCard podcastSeries={p} key={p.uuid} addToSubscriptions={addToSubscriptions} /> </Link>
+        <BrowseCard podcastSeries={p} key={p.uuid} addToSubscriptions={addToSubscriptions} />
     );
 
     return (
-        <div className="browseList">
+        <>
             {podcastsList}
-        </div>
+        </>
     )
 };
 

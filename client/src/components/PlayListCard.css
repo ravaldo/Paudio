@@ -1,36 +1,45 @@
 .PlaylistCard {
     margin: 0 5%;
-    display: flex;
-    align-items: center;
-    border-radius: 5px;
-    gap: 15px;
+  background-color: rgb(51, 51, 51);
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  gap: 15px;
 }
-
-.PlaylistCard.dark {
-    background-color: rgb(51,51,51);
-}
-
-.PlaylistCard.light {
-    background-color: rgb(51,51,51);
-}
-
 
 .PlaylistCard img {
     width: 150px;
     border-radius: 5px;
 }
 
-.PlaylistCard button {
-    display:flex;
-    width: 25;
-    margin: 0 5%;
+.PlaylistCard h4 {
+    margin: 8px 0 0 0;
+  }
+
+.PlaylistCard > div {
+    flex: 1
 }
 
-/* .PlaylistCard.light {
-    margin: 0 5%;
-    background-color: rgb(51, 51, 51);
+.PlaylistCard .cardMain {
     display: flex;
     align-items: center;
-    border-radius: 5px;
-    gap: 15px;
-} */
+    justify-content: space-between;
+}
+
+.PlaylistCard #icon {
+    margin-right: 0.3em;
+    font-size: 2em;
+}
+
+.PlaylistCard #icon:hover {
+    cursor: pointer;
+    color: #f36427;
+}
+
+.PlaylistCard .dark {}
+
+.PlaylistCard .light {}
+
+.PlaylistCard .light+hr {
+    border-color: rgb(223, 228, 233);
+}

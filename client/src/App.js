@@ -17,8 +17,10 @@ import EpisodeList from "./components/EpisodeList";
 import Error from "./components/Error";
 import Test from "./components/Test";
 
-import TaddyService from "./services/TaddyService";
+import TaddyService from "./services/TaddyService.mjs";
+import PaudioService from "./services/PaudioService";
 import topPodcastData from "./services/topPodcastData";
+
 
 
 function App() {
@@ -27,12 +29,14 @@ function App() {
   const [playlist, setPlayList] = useState([]);
   const [songIndex, setSongIndex] = useState(0);
   const [widescreen, setWidescreen] = useState(false);
-  const [episode, setEpisode]= useState('')
   const [subscriptions, setSubscriptions] = useState([]);
+  const [popularPodcasts, setPopularPodcasts] = useState([]);
 
   useEffect(() => {
     setContentHeight();
-  })
+    PaudioService.getAllPopular().then(data => setPopularPodcasts(data))
+  }, [])
+
 
   const setContentHeight = () => {
     const footerHeight = document.querySelector(".player_footer").offsetHeight;
@@ -50,21 +54,20 @@ function App() {
     setSongIndex(playlist.length);
   }
 
-  const addToPlaylist = (episode) => setPlayList([...playlist, episode])
   const addToSubscriptions = (podcast) => {
-    setSubscriptions([...subscriptions, podcast])
-    console.log(podcast)
+    PaudioService.addOneFavourite(podcast)
+    PaudioService.addOnePopular(podcast)
   };
-
+  const addToPlaylist = (episode) => setPlayList([...playlist, episode])
   const deleteFromPlaylist = (episode) => setPlayList(playlist.filter(e => e.uuid !== episode.uuid))
-  const handleClickNext = () => { setSongIndex( _ => songIndex < playlist.length - 1 ? songIndex + 1 : songIndex) };
-  const handleClickPrev = () => { setSongIndex( _ => songIndex > 0 ? songIndex - 1 : songIndex) };
+  const handleClickNext = () => { setSongIndex(_ => songIndex < playlist.length - 1 ? songIndex + 1 : songIndex) };
+  const handleClickPrev = () => { setSongIndex(_ => songIndex > 0 ? songIndex - 1 : songIndex) };
 
   return (
     <div className={`App ${lightDark}`}>
       <Router>
-        
-        <Header toggleLightDark={toggleLightDark} lightDark={lightDark}/>
+
+        <Header toggleLightDark={toggleLightDark} lightDark={lightDark} />
 
         <div className="content" >
           <Routes>
@@ -74,18 +77,18 @@ function App() {
               addToPlaylist={addToPlaylist}
               lightDark={lightDark}
             />} />
-           <Route path="/browse" element={<BrowseList lightDark={lightDark} addToSubscriptions={addToSubscriptions} />} />
-            <Route path="/search" element={<Search lightDark={lightDark}/>} />
-            <Route path="/playlist" element={<Playlist playlist={playlist} deleteFromPlaylist={deleteFromPlaylist} lightDark = {lightDark}/>} />
+            <Route path="/browse" element={<BrowseList podcasts={popularPodcasts} lightDark={lightDark} addToSubscriptions={addToSubscriptions} />} />
+            <Route path="/search" element={<Search lightDark={lightDark} addToSubscriptions={addToSubscriptions}/>} />
+            <Route path="/playlist" element={<Playlist playlist={playlist} deleteFromPlaylist={deleteFromPlaylist} lightDark={lightDark} />} />
             <Route path="/*" element={<Error />} />
           </Routes>
         </div>
 
         <div className="player_footer">
 
-          <AudioPlayer className="player" 
+          <AudioPlayer className="player"
             src={playlist.length > 0 ? playlist[songIndex].audioUrl : null}
-            header={playlist.length>0?`Now playing: ${playlist[songIndex].name}`: ''}
+            header={playlist.length > 0 ? `Now playing: ${playlist[songIndex].name}` : ''}
             onPlay={e => console.log("onPlay")}
             onClickPrevious={handleClickPrev}
             onClickNext={handleClickNext}

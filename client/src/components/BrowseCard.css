@@ -5,58 +5,51 @@
     align-items: center;
     border-radius: 5px;
     gap: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
     color: whitesmoke;
-
-
-}
-
-.BrowseCard h4 {
-    margin: 0;
-    line-height: -0.5em;
 }
 
 .BrowseCard img {
     width: 150px;
     border-radius: 5px;
-    /* height:100% */
 }
 
-.podcastDetails {
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
+.BrowseCard h4 {
+    margin: 8px 0 0 0;
+}
 
+.BrowseCard>div {
+    flex: 1
+}
+
+.BrowseCard .cardMain {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+.BrowseCard #icon {
+    margin-right: 0.3em;
+    font-size: 2em;
+}
+
+.BrowseCard img:hover {
+    -webkit-box-shadow: 0px 0px 6px 5px #f36427;
+    -moz-box-shadow: 0px 0px 6px 5px #f36427;
+    box-shadow: 0 0 6px 6px #f36427;
+
+}
+
+.BrowseCard #icon:hover {
+    cursor: pointer;
+    color: #f36427;
 }
 
 .BrowseCard.dark {}
 
-.BrowseCard.light {
-    background-color: #555;
-    color: whitesmoke;
-}
+.BrowseCard.light {}
 
-/* .BrowseCard:hover{
-    border: solid orange;
-    background-color: rgb(76, 75, 75);
-    border-radius:5px
-} */
-
-/* .BrowseCard:hover {
-    -webkit-box-shadow: 0px 0px 0px 5px #f36427;
-    -moz-box-shadow: 0px 0px 0px 5px #f36427;
-    box-shadow: 0px 0px 0px 5px #f36427;
-  } */
-
-.BrowseCard:hover {
-    border-top: solid #f36427;
-    border-left: solid #f36427;
-    border-radius: 5px;
-    border-width: 5px;
-    padding: 0px;
-}
-
-.BrowseCard img:hover{
-    border-radius: 0px;
+.BrowseCard.light+hr {
+    border-color: rgb(223, 228, 233);
 }

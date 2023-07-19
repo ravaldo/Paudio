@@ -1,16 +1,4 @@
 
-// const fetchInOrder = async function (topPodcasts) {
-//     const responses = [];
-
-//     for (let i = 0; i < 30; i++) {
-//         console.log(topPodcasts[i].name)
-//         const response = await TaddyService.searchForEpisodes(topPodcasts[i].name)
-//         responses.push(response);
-//     }
-//     return responses
-// }
-
-
 const topPodcasts = [
     { name: "The Joe Rogan Experience", authorName: "Joe Rogan" },
     { name: "Call Her Daddy", authorName: "Alex Cooper" },
@@ -23,7 +11,6 @@ const topPodcasts = [
     { name: "Shawn Ryan Show", authorName: "Shawn Ryan | Cumulus Podcast Network" },
     { name: "Distractible", authorName: "Distractible" },
     { name: "On Purpose with Jay Shetty", authorName: "iHeartPodcasts" },
-    { name: "Scamanda", authorName: "Lionsgate Sound" },
     { name: "Lex Fridman Podcast", authorName: "Lex Fridman" },
     { name: "The Daily", authorName: "The New York Times" },
     { name: "The Horror of Dolores Roach", authorName: "Gimlet" },
@@ -114,4 +101,5 @@ const topPodcasts = [
     { name: "The King Road Killings: An Idaho Murder Mystery", authorName: "ABC News" }
 ]
 
-export default topPodcasts;
+// export default topPodcasts;
+module.exports = topPodcasts;

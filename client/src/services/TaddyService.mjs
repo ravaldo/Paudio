@@ -1,7 +1,6 @@
-import taddy_cred from "./apikey";
-import dummySearch from "./dummySearch";
-import dummyEpisodes from "./dummyEpisodes";
-
+import taddy_cred from "./apikey.js";
+import dummySearch from "./dummySearch.js";
+import dummyEpisodes from "./dummyEpisodes.js";
 
 const baseURL = 'https://api.taddy.org/';
 

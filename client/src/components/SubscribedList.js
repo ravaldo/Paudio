@@ -3,17 +3,18 @@ import { Link } from 'react-router-dom';
 import styled from 'styled-components'
 import topPodcastData from '../services/topPodcastData';
 import './SubscribedList.css'
+import PaudioService from '../services/PaudioService';
 
 const SubscribedList = ({subscriptions}) => {
 
     const [podcasts, setPodcasts] = useState([]);
 
     useEffect(() => {
-        setPodcasts(subscriptions)
+        PaudioService.getAllFavourites().then(results => setPodcasts(results))
     }, [podcasts]);
 
-    if (podcasts.length == 0)
-    return null;
+    if (!podcasts || podcasts.length === 0 )
+        return "Library currently empty ...";
 
     const podcastsList = podcasts.map(p => {
         return (

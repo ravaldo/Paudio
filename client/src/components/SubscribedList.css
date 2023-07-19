@@ -1,9 +1,8 @@
 .grid-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 4px
-
-
+    padding: 4px;
+    justify-content: space-around;
 }
 
 .grid-container img {

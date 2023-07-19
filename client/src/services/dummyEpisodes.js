@@ -931,4 +931,5 @@ const dummyEpisodes = {
     }
 }
 
-export default dummyEpisodes;
+// export default dummyEpisodes;
+module.exports = dummyEpisodes;
