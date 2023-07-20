@@ -42,8 +42,8 @@ function App() {
 
   // because our header and footer are sticky that leaves us with a scrollable
   // portion in the middle of the screen. the content there should not be hidden
-  // by the either the footer/header. by setting the content height exactly to 
-  // the remaining pixels we can get ensure no content is hidden and the scroll
+  // by the either the header/footer. by setting the content height exactly to 
+  // the remaining pixels we can ensure no content is hidden and the scroll
   // bar lines up nicely with the content portion
   const setContentHeight = () => {
     const footerHeight = document.querySelector(".player_footer").offsetHeight;

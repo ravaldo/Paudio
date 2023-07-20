@@ -5,6 +5,15 @@ const createRouter = function (collection) {
 
     const router = express.Router();
 
+    router.use((req, res, next) => {
+        res.header('Access-Control-Allow-Origin', '*'); // Replace '*' with the specific origin of your React app
+        res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+        res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+        res.header('Access-Control-Allow-Credentials', 'true'); // Enable sending credentials (e.g., cookies) with cross-origin requests
+        next();
+      });
+
+
     // get all
     router.get('/', (req, res) => {
         collection
