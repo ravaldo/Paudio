@@ -17,7 +17,7 @@ const EpisodeList = ({ playTrack, addToPlaylist, lightDark }) => {
             if(!result)
                 TaddyService.searchForEpisodesWithUUID(uuid).then(data => {
                     setPodcast(data)
-                    PaudioService.addOnePopular(data)
+                    // PaudioService.addOnePopular(data)
                 })
             else
                 setPodcast(result);
