@@ -36,21 +36,19 @@
 
 
 .box:hover {
-    outline: 4px solid #f36427;
-    outline-offset: -3px;
+    -webkit-box-shadow: 0px 0px 5px 5px #f36427;
+    -moz-box-shadow: 0px 0px 5px 5px #f36427;
+    box-shadow: 0 0 5px 5px #f36427;
+    z-index: 10;
     border-radius: 5px;
-    margin-bottom: -4px;
-    padding-bottom: -8px;
-}
 
-/* .box:hover {
-    -webkit-box-shadow: 0px 0px 0px 2px #f36427;
-    -moz-box-shadow: 0px 0px 0px 2px #f36427; 
-    /* box-shadow: 0px 0px 0x 2px #f36427; */
+}
+/* .box:hover { */
+
 /* padding-bottom: -4px;
     margin-bottom: -4px;
     position: relative;
-  }  */
+  
 */ .grid-container img:hover {
     border-radius: 0px;
 }
