@@ -1,6 +1,6 @@
 import React from 'react';
 import './EpisodeCard.css'
-
+import { Link } from 'react-router-dom';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCirclePlay } from '@fortawesome/free-regular-svg-icons';
@@ -19,7 +19,9 @@ const EpisodeCard = ({ episode, playTrack, addToPlaylist, lightDark, defaultImgU
     <>
       <div className={`EpisodeCard ${lightDark}`}>
 
-        <img src={episode.imageUrl ? episode.imageUrl : defaultImgUrl} alt={`image of ${episode.name}`} />
+        <Link to={"/episode"} state={{episode}} >
+          <img src={episode.imageUrl ? episode.imageUrl : defaultImgUrl} alt={`image of ${episode.name}`} />
+        </Link>
 
         <div >
           <h4>{title}</h4>
@@ -27,6 +29,7 @@ const EpisodeCard = ({ episode, playTrack, addToPlaylist, lightDark, defaultImgU
             <div>
               <p>Duration: {details.episodeDuration}</p>
               <p>{details.episodeDate}</p>
+              {/* <p>{details.shortDescription}</p> */}
             </div>
             <div>
               <span id="icon"><FontAwesomeIcon icon={faSquarePlus} onClick={() => addToPlaylist(episode)} /></span>

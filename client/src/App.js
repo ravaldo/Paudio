@@ -14,6 +14,7 @@ import SubscribedList from "./components/SubscribedList";
 import Playlist from "./components/Playlist";
 import BrowseList from "./components/BrowseList";
 import EpisodeList from "./components/EpisodeList";
+import EpisodeInfo from "./components/EpisodeInfo";
 import Error from "./components/Error";
 import Test from "./components/Test";
 
@@ -115,6 +116,10 @@ function App() {
               addToPlaylist={addToPlaylist}
               lightDark={lightDark}
             />} />
+            <Route path="/episode" element={<EpisodeInfo
+              playTrack={playTrack}
+              addToPlaylist={addToPlaylist}
+              lightDark={lightDark} />} />
             <Route path="/browse" element={<BrowseList subscriptions={subscriptions} podcasts={popularPodcasts} lightDark={lightDark} addRemoveSubscription={addRemoveSubscription} />} />
             <Route path="/search" element={<Search subscriptions={subscriptions} lightDark={lightDark} addRemoveSubscription={addRemoveSubscription}/>} />
             <Route path="/playlist" element={<Playlist playlist={playlist} deleteFromPlaylist={deleteFromPlaylist} lightDark={lightDark} />} />
