@@ -7,7 +7,7 @@ import { faCirclePlay } from '@fortawesome/free-regular-svg-icons';
 import { faSquarePlus } from '@fortawesome/free-regular-svg-icons';
 import getDetails from './episodeUtility';
 
-const EpisodeCard = ({ episode, playTrack, addToPlaylist, lightDark, defaultImgUrl }) => {
+const EpisodeCard = ({ episode, playTrack, addToPlaylist, lightDark }) => {
 
   if (!episode)
     return null;
@@ -20,7 +20,7 @@ const EpisodeCard = ({ episode, playTrack, addToPlaylist, lightDark, defaultImgU
       <div className={`EpisodeCard ${lightDark}`}>
 
         <Link to={"/episode"} state={{episode}} >
-          <img src={episode.imageUrl ? episode.imageUrl : defaultImgUrl} alt={`image of ${episode.name}`} />
+          <img src={episode.imageUrl} alt={`image of ${episode.name}`} />
         </Link>
 
         <div >

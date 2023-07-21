@@ -14,7 +14,7 @@ const EpisodeList = ({ playTrack, addToPlaylist, lightDark }) => {
 
     useEffect(() => {
         PaudioService.getOnePopular(uuid).then(result => {
-            if(!result)
+            if (!result)
                 TaddyService.searchForEpisodesWithUUID(uuid).then(data => {
                     setPodcast(data)
                     // PaudioService.addOnePopular(data)
@@ -22,20 +22,26 @@ const EpisodeList = ({ playTrack, addToPlaylist, lightDark }) => {
             else
                 setPodcast(result);
         });
-        
+
     }, []);
 
     if (!podcast)
         return;
 
-    const episodesList = podcast.episodes.map(e =>
-        <EpisodeCard
-            key={e.uuid}
-            episode={e}
-            playTrack={playTrack}
-            addToPlaylist={addToPlaylist}
-            lightDark={lightDark}
-            defaultImgUrl={podcast.imageUrl} />
+    const episodesList = podcast.episodes.map(e => {
+        if (!e.imageUrl) {
+            e.imageUrl = podcast.imageUrl;
+        }
+        return (
+            <EpisodeCard
+                key={e.uuid}
+                episode={e}
+                playTrack={playTrack}
+                addToPlaylist={addToPlaylist}
+                lightDark={lightDark}
+            />
+        )
+    }
     );
 
 
