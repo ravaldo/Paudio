@@ -1,43 +1,21 @@
-/* .bg {
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-    background-attachment: fixed;
-    height: inherit;
-    padding: 50px;
-} */
-
-
-/* ///////////////////////////////////////////////////////////// */
-
 .wrap {
     position: relative;
+    height: 100%;
 }
 
-.wrap .background-image {
+.wrap > .background {
     position: absolute;
-    opacity: 0.07;
+    height: 100%;
     width: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
 }
 
-.wrap .description {
+.wrap > .text {
     position: relative;
-    padding: 25px;
+    height: 100%;
+    padding: 0 25px;
+    overflow-y: auto;
 }
 
-/*
-image needs absolute position so the text can overlay it
-
-wrap static & description static
-    he header scrolls up and extra space underneath content
-
-wrap static & description relative
-    same as above?
-
-wrap relative & description static
-    seems to be what we want but it will continue scrolling to bottom of image
-
-wrap relative & description relative
-    same as above?
-
-*/

@@ -8,28 +8,15 @@ const EpisodeInfo = () => {
 
     return (
         <>
-
-            {/* <div className="bg"
-                style={{backgroundImage: `url(${episode.imageUrl})`}}
-                dangerouslySetInnerHTML={{ __html: episode.description }}
-                >
-            </div> */}
-
-
-            {/* ////////////////////////////////// */}
-
-
             <div className="wrap">
-                <img className="background-image" src={episode.imageUrl} />
-
-                <div className="description"
-                    dangerouslySetInnerHTML={{ __html: episode.description }}>
+                <div className="background" 
+                    style={{ backgroundImage: `url(${episode.imageUrl})` }} >
+                </div>
+                <div className="text"
+                    dangerouslySetInnerHTML={{ __html: episode.description }} >
                 </div>
             </div>
-
         </>
-
-
     )
 }
 
